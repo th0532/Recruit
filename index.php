@@ -1,6 +1,15 @@
 <?php
+session_start();
 include "./inc/left.php";
 include "./inc/top.php";
+
+if(!isset($_SESSION['userid'])) {
+  echo "<script>window.alert('로그인을 해주세요');</script>";
+  echo "<script>location.href='./login.php';</script>";
+}
+else{
+
+}
 ?>  
 <link rel="stylesheet" href="./assets/css/index.css">
 <div class="content">

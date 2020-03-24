@@ -145,7 +145,7 @@
   .menu > ul > li >div > a > span{
     display: inline-block;
     width:100%;
-    font-size:0.9rem;
+    font-size:0.95rem;
   }
   .menu > ul > li >div > a > span > p{
     display: inline-block;

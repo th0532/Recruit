@@ -66,7 +66,8 @@ include "./inc/top.php";
                 </tr>
             </table>
 
-            <button class="insert"><a href="">글쓰기</a></button>
+            <button class="insert"><a href="./employment_write.php">글쓰기</a></button>
+
 
             <div class="paging">
                     <a href=""><<</a>
@@ -172,7 +173,7 @@ include "./inc/top.php";
                     </a>
                 </li>
             </ul>
-            <button class="insert"><a href="">글쓰기</a></button>
+            <button class="insert"><a href="./employment_write.php">글쓰기</a></button>
 
             <div class="paging">
                     <a href=""><<</a>

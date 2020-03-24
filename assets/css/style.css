@@ -10,7 +10,7 @@
 }
 .section1> .title {
     display:block;
-    margin-left:15%;
+    margin-left:12%;
     margin-top: 0px;
     float:left;
 }
@@ -18,7 +18,7 @@
     font-size:1.5rem;
 }
 .search{
-    margin-left:73%;
+    margin-left:77%;
     padding-top:1%;
 }
 .search > input{
@@ -82,7 +82,7 @@
     float:right;
     margin-top:2%;
     margin-right:8%;
-    border:2px solid black;
+    border:2px solid aaaaaa;
 }
 .insert > a{
     color:black;

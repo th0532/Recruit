@@ -47,7 +47,7 @@
 .dropdown > div > ul > li{
     padding-top:15px;
     margin-left: 5%;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     width: 60%;
 }
 .dropdown > div > ul > li > a {
@@ -66,6 +66,9 @@
     background-color:black;
 }
 .mobile_nav_off{
+    display:none;
+}
+.list_hover_onoff{
     display:none;
 }
 

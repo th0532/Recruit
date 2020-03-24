@@ -25,12 +25,12 @@ include "./inc/top.php";
                     <th>댓글</th>
                 </tr>
                 <tr>
-                    <td><a href="#">5</a></td>
-                    <td><a href="#">혹시 갓스물 서포터즈 지원하신 분들 중에 아직도 메일 읽지 않음으로 뜨는 분 계신가요?</td>
-                    <td><a href="#">이태희</td>
-                    <td><a href="#">2020.03.24</td>
-                    <td><a href="#">87</td>
-                    <td><a href="#">5</td>
+                    <td><a href="./community_view.php">5</a></td>
+                    <td><a href="./community_view.php">혹시 갓스물 서포터즈 지원하신 분들 중에 아직도 메일 읽지 않음으로 뜨는 분 계신가요?</td>
+                    <td><a href="./community_view.php">이태희</td>
+                    <td><a href="./community_view.php">2020.03.24</td>
+                    <td><a href="./community_view.php">87</td>
+                    <td><a href="./community_view.php">5</td>
                 </tr>
                 <tr>
                     <td><a href="#">4</a></td>
@@ -66,7 +66,7 @@ include "./inc/top.php";
                 </tr>
             </table>
 
-            <button class="insert"><a href="">글쓰기</a></button>
+            <button class="insert"><a href="./community_write.php">글쓰기</a></button>
 
             <div class="paging">
                     <a href=""><<</a>
@@ -84,7 +84,7 @@ include "./inc/top.php";
         <div class="table_mb">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="./community_view.php">
                         <p>혹시 갓스물 서포터즈 지원하신 분들 중에 아직도 메일 읽지 않음으로 뜨는 분 계신가요?</p>
                         <div class="sub_text">
                             <span>이태희</span>
@@ -139,7 +139,7 @@ include "./inc/top.php";
                     </a>
                 </li>
             </ul>
-            <button class="insert"><a href="">글쓰기</a></button>
+            <button class="insert"><a href="community_write.php">글쓰기</a></button>
 
             <div class="paging">
                     <a href=""><<</a>
