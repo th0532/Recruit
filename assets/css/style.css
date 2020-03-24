@@ -1,0 +1,185 @@
+.content{
+    margin-top:30px;
+    width:85%;
+    height:80%;
+}
+.section1{
+    width:100%;
+    height:10%;
+    margin-right:20%;
+}
+.section1> .title {
+    display:block;
+    margin-left:15%;
+    margin-top: 0px;
+    float:left;
+}
+.section1> .title > h1{
+    font-size:1.5rem;
+}
+.search{
+    margin-left:73%;
+    padding-top:1%;
+}
+.search > input{
+    width:45%;
+    height:30px;
+    margin-right:2%;
+    font-size:0.9rem;
+}
+.search > button{
+    width: 50px;
+    height: 30px;
+}
+.section2 > .table_pc > table{
+    width: 80%;
+    margin-left: 12%;
+    text-align: center;
+    margin-top: 30px;
+    border-top:2px solid #cccccc;
+    border-bottom:2px solid #cccccc;
+    border-collapse:collapse;
+}
+.section2 > .table_pc > table tr th{
+    border-top:2px solid #cccccc;
+    border-bottom:2px solid #cccccc;
+    background-color:#f5f5f5;
+}
+.section2 > .table_pc > table tr td{
+    padding:7px 5px;
+    border-top:1px solid #cccccc;
+    border-bottom:1px solid #cccccc;
+}
+.section2 > .table_pc > table tr td >a{
+    display:inline-block;
+    width:100%;
+}
+.table_mb{
+    display:none;
+}
+
+.paging {
+    display:block;
+    clear: right;
+    width:45%;
+    height:50px;
+    position:relative;
+    left:40%;
+    margin-top:10%;
+}
+
+.paging a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size:1.1rem;
+}
+.insert{
+    width: 80px;
+    height:40px;
+    background-color:white;
+    float:right;
+    margin-top:2%;
+    margin-right:8%;
+    border:2px solid black;
+}
+.insert > a{
+    color:black;
+    display: inline-block;
+    width:100%;
+    height:100%;
+    margin-top:10%;
+    font-size:1rem;
+}
+@media (max-width: 1058px){
+    .search{
+        margin-left:70%;
+        padding-top:2%;
+    }
+    .section2 > table{
+        width:75%;
+    }
+    .paging {
+        width:55%;
+        left:33%;
+    }
+}
+
+@media (max-width: 768px){
+    .search{
+        margin-left:65%;
+        padding-top:3%;
+    }
+    .search > input{
+        width:65%;
+    }
+    .table_mb{
+        display:block;
+    }
+    .table_mb > ul > li{
+        border-top:1px solid #cccccc;
+        padding:5px 0px;
+        padding-left:25px;
+    }
+    .table_mb > ul >li:last-child{
+        border-bottom:1px solid #cccccc;
+    }
+    .table_mb > ul > li > a{
+        padding:3px 0px;
+    }
+    .table_mb > ul > li > a > p{
+        font-size:0.9rem;
+        font-weight: bold;
+    }
+    .table_pc{
+        display:none;
+    }
+    .sub_text{
+        font-size:0.85rem;
+    }
+    .insert{
+        margin-right:0%;
+    }
+    .paging {
+        width:60%;
+        position:relative;
+        left:30%;
+    }
+}
+
+@media (max-width: 576px){
+    .search{
+        margin-left:55%;
+        padding-top:3%;
+    }
+    .content{
+        width:92%;
+    }
+    .section1> .title {
+        margin-left:11%;
+    }
+    .section1> .title > h1 {
+        font-size:1.2rem;
+    }
+    .search{
+        padding-top:2%;
+    }
+    .search > input{
+        width:68%;
+        margin-right:1%;
+    }
+    .search > button{
+        width: 45px;
+    }
+    .table_mb > ul > li{
+        padding-left:15px;
+    }
+    .paging{
+        height:50px;
+    }
+    .paging a{
+        padding:8px 10px;
+    }
+    
+}

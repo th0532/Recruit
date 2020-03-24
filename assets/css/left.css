@@ -1,0 +1,145 @@
+.side_menu{
+    width:15%;
+    height:100%;
+    background-color:rgb(24,24,28);
+    position: fixed;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.login > a{
+    color:White;
+    display:inline-block;
+    margin:30px 0px 0px 30px;
+    font-size:1.3rem;
+    text-decoration:underline;
+}
+.logo_box > h1{
+    color:#aaaaaa;
+    font-size:2rem;
+    margin:50px 0px 0px 30px;
+    display:inline-block;
+}
+.side_menu_content button{
+    width:60%;
+    background-color:black;
+    color:white;
+    height:50px;
+}
+.side_menu_content button a{
+    display:inline-block;
+    width:100%;
+    height:100%;
+    color:white;
+    font-size:0.85rem;
+    margin-top:10%;
+}
+.nav {
+    width:90%;
+}
+.nav > li{
+    height:500px;
+}
+.dropdown > div > ul{
+    margin:10px 0px 0px 0px;
+    padding-left:0px;
+}
+.dropdown > div > ul > li{
+    padding-top:15px;
+    margin-left: 5%;
+    font-size: 0.85rem;
+    width: 60%;
+}
+.dropdown > div > ul > li > a {
+    color:white;
+}
+.dropdown > div, .nav > button{
+    margin-top:25px;
+}
+.list_hover_off{
+    display:none;
+}
+.menu_on{
+    background-color:#c4b5b5;
+}
+.menu_off{
+    background-color:black;
+}
+.mobile_nav_off{
+    display:none;
+}
+
+@media (max-width: 1058px){
+    .side_menu{
+        width:19%;
+    }
+    .logo_box > h1{
+        font-size:1.5rem;
+    }
+    .login > a{
+        font-size:1rem;
+    }
+    /* .side_menu_content > ul > li{
+        width:65%;
+        text-align:left;
+    }
+    .side_menu_content > ul > li > a{
+        font-size:1rem;
+    }  */
+}
+@media (max-width: 768px){
+    .mobile_nav_on{
+        position: fixed;
+        right: 35%;
+    }
+    .side_menu{
+        width:0%;
+    }
+    .login > a{
+        color:White;
+        display:inline-block;
+        margin:60px 0px 0px 40px;
+        font-size:1.3rem;
+        text-decoration:underline;
+        text-decoration-color:white;
+    }
+    /* .side_menu_content > ul > li > a{
+        font-size:1.1rem;
+    }
+    .side_menu_content > ul > li {
+        margin-top:15px;
+    }
+    
+    .side_menu_content > ul > li:hover {
+        background-color:black;
+    } */
+    .logo_box > h1{
+        color:#aaaaaa;
+        font-size:1.5rem;
+        margin:50px 0px 0px 40px;
+        display:inline-block;
+        font-weight:bold;
+    }
+    .mobile_nav_off{
+        width:50px;
+        display:block;
+        position:relative;
+        top:15px;
+        right:20px;
+        float:right;
+    }
+    .mobile_nav_on{
+        display:block;
+    }
+  .side_menu_on{
+    width:35%;
+  }
+}
+@media (max-width: 576px){
+    .mobile_nav_on{
+        right: 46%;
+    }
+    .side_menu_on{
+        width:46%;
+      }
+}
