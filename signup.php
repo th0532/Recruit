@@ -14,10 +14,10 @@ include "./inc/top.php";
                 <li><p >나이</p></li>
                 <li><input style="width:30%;" type="text" name="age" > </li>
                 <li><p>휴대폰 번호</p></li>
-                <li>
-                    <input class="phone" type="text" name="phone1" placeholder=""> -
-                    <input class="phone" type="text" name="phone2" placeholder=""> -
-                    <input class="phone" type="text" name="phone3" placeholder="">
+                <li class="phone">
+                    <input type="text" name="phone1" placeholder=""> &nbsp - &nbsp
+                    <input type="text" name="phone2" placeholder=""> &nbsp - &nbsp
+                    <input type="text" name="phone3" placeholder="">
                 </li>
                 <li><p>아이디</p></li>
                 <li><input type="text" name="id" placeholder="ID 를 입력해 주세요"> </li>

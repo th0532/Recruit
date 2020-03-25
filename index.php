@@ -1,15 +1,7 @@
 <?php
-session_start();
+include "./inc/login_session.php";
 include "./inc/left.php";
 include "./inc/top.php";
-
-if(!isset($_SESSION['userid'])) {
-  echo "<script>window.alert('로그인을 해주세요');</script>";
-  echo "<script>location.href='./login.php';</script>";
-}
-else{
-
-}
 ?>  
 <link rel="stylesheet" href="./assets/css/index.css">
 <div class="content">
@@ -32,7 +24,22 @@ else{
       </li>
       <li>
         <div class="menu_img">
-          <img src="./assets/img/list/list1.png" alt="">
+          <img src="./assets/img/list/list4.png" style="float:right;" alt="">
+        </div>
+        <div class="answer">
+          <a class="menu_a" href="./incruit.php">
+            <span>
+            <p>공채소식</p><br>
+              대기업, 중견기업, 중소기업, 공기업의 <br>
+              신입 공채, 수시채용, 경력 채용, 인턴 등<br>
+              여러 소식을 확인 해 보세요
+            </span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="menu_img">
+          <img src="./assets/img/list/list1.png" alt="">  
         </div>
         <div class="answer">
           <a class="menu_a" href="./license.php">
@@ -56,21 +63,6 @@ else{
               취업을 준비하는 다른 친구들과  <br>
               자유게시판을 통하여 정보를<br>
               공유해 보세요
-            </span>
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="menu_img">
-          <img src="./assets/img/list/list4.png" style="float:right;" alt="">
-        </div>
-        <div class="answer">
-          <a class="menu_a" href="./incruit.php">
-            <span>
-            <p>공채소식</p><br>
-              대기업, 중견기업, 중소기업, 공기업의 <br>
-              신입 공채, 수시채용, 경력 채용, 인턴 등<br>
-              여러 소식을 확인 해 보세요
             </span>
           </a>
         </div>

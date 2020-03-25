@@ -1,12 +1,20 @@
 <?php
 include "./inc/left.php";
 include "./inc/top.php";
+include "./inc/dbconnect.php";
 
     $mode = $_GET['mode'];
+    $param_num = $_GET['num'];
+    $query = "select * from license where num = '".$param_num."'";
+    mysqli_query($connect, $query);
+    $result = mysqli_query($connect,$query);
+    $row = mysqli_fetch_array($result);
+        $title = $row['title'];
+        $content = $row['content'];
 ?>  
 <link rel="stylesheet" href="./assets/css/write.css">
 
-<form action="./exec/write_exec.php?mode=<?=$mode?>" method ="post">
+<form action="./exec/write_exec.php?mode=<?=$mode?>&num=<?=$param_num?>" method ="post">
 <input type="hidden" value ="license" name="db_gubun" id="">
 <input type="hidden" value ="<?=$mode?>" name="mode" id="">
     <div class="content">
@@ -15,11 +23,11 @@ include "./inc/top.php";
                 <li><h3>자격증후기</h3></li>
                 <li>
                     <span>제목</span>
-                    <input type="text" maxlength=45 name="title" >
+                    <input type="text" value="<?=$title?>" maxlength=45 name="title" >
                 </li>
                 <li>
                     <p>내용</p>
-                    <textarea  name="content" ></textarea>
+                    <textarea name="content" ><?=$content?></textarea>
                 </li>
             </ul>
             <div class="active">

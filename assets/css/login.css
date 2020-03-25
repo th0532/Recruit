@@ -6,7 +6,7 @@
 .login{
     width:50%;
     margin:0 auto;
-    margin-top:10%;
+    margin-top:5%;
     margin-left:30%;
 }
 .signup{
@@ -15,29 +15,40 @@
     margin-top:0%;
     margin-left: 30%;
 }
-.login > ul > li > p, .signup > ul > li > p{
+.IDPASS{
+    width:50%;
+    margin:0 auto;
+    margin-top:0%;
+    margin-left: 30%;
+}
+.login > ul, .signup > ul, .IDPASS > ul{
+    width:65%;
+}
+.login > ul > li > p, .signup > ul > li > p, .IDPASS > ul > li > p{
     font-weight:bold;
     font-size:1.1rem;
 }
 .login > ul > li > a, .signup > ul > li > a{
     float:right;
 }
-.login > ul > li > input, .signup > ul > li > input{
-    width:70%;
+.login > ul > li > input, .signup > ul > li > input , .IDPASS > ul > li > input{
+    width:100%;
     height:30px;
     font-size:1.1rem;
     padding-left:5px;
 }
+.login > ul > .phone > input, .signup > ul > .phone > input , .IDPASS > ul > .phone > input{
+    width:30%;
+}
 .login_btn{
     margin-top:5%;
 }
-.login_btn> button,.login > ul > .login_btn > input, .signup > ul >.login_btn > input{
+.login_btn> button,.login > ul > .login_btn > input, .signup > ul >.login_btn > input , .IDPASS > ul >.login_btn > input{
     background-color:black;
     border:2px solid #e3e3e3;
-    width:70%;
+    width:100%;
     height:35px;
     color:white;
-
 }
 .login_btn> button >a{
     color:white;
@@ -48,7 +59,7 @@
 .signup_btn > button{
     border:2px solid #e3e3e3;
     background-color:white;
-    width:70%;
+    width:100%;
     height:35px;
     margin-top:3%;
 }
@@ -58,37 +69,38 @@
     display: inline-block;
     width: 100%;
 }
-
 .find{
     margin-top: 3%;
-    width: 70%;
+    width: 100%;
     height:10px;
     text-align: right;
 }
 .find > a{
     font-weight:bold;
 }
-.signup > ul > li > .phone {
-    width:21.4%;
+.phone{
+    display:flex;
+}
+.phone > input{
+width:30%;
 }
 @media (max-width: 1058px){
-    .signup > ul > li > .phone {
-        width:21%;
-    }
 }
 @media (max-width: 768px){
-    .login, .signup{
+
+    .login, .signup, .IDPASS{
         width:100%;
         margin:0 auto;
         margin-top:10%;
         margin-left: 10%;
     }
-    .login > ul > li > p, .signup > ul > li > p{
+    .login > ul > li > p, .signup > ul > li > p, .IDPASS > ul > li > p{
         font-size:0.9rem;
     }
-    .login > ul > li > input, .signup > ul > li > input {
+    .login > ul > li > input, .signup > ul > li > input, .IDPASS > ul > li > input {
         font-size:0.9rem;
     }
+
     .login_btn> button >a{
         font-size:0.9rem;
     }
@@ -98,12 +110,6 @@
     .find >a{
         font-size:0.9rem;
     }
-    .signup > ul > li > .phone {
-        width:21.2%;
-    }
 }
 @media (max-width: 576px){
-    .signup > ul > li > .phone {
-        width:20.4%;
-    }
 }

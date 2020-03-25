@@ -35,7 +35,7 @@
 .section1 > .active{
     margin-right:18%;
 }
-.section1 > .active > button{
+.section1 > .active > button, .section1 > .active > input{
     width: 60px;
     height: 30px;
     background-color: white;
@@ -44,6 +44,7 @@
     margin-bottom: 5%;
     border: 1px solid #aaaaaa;
     margin-left: 2%;
+    font-size: 1rem;
 }
 .section1 > .active > button > a{
     color:black;

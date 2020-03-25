@@ -5,7 +5,7 @@ include "./inc/left.php";
 include "./inc/top.php";
 
     $param_num = $_GET['num'];
-    $query = "select * from community where num = '".$param_num."'";
+    $query = "select * from license where num = '".$param_num."'";
 
     mysqli_query($connect, $query);
     $result = mysqli_query($connect,$query);
@@ -20,11 +20,11 @@ include "./inc/top.php";
 <link rel="stylesheet" href="./assets/css/view.css">
 
 <form action="./exec/delete_exec.php?num=<?=$param_num?>" method ="post">
-    <input type="hidden" value ="community" name="db_gubun" id="">
+    <input type="hidden" value ="license" name="db_gubun" id="">
         <div class="content">
             <div class="section1">
                 <ul>
-                    <li><h3>자유게시판</h3></li>
+                    <li><h3>자격증후기</h3></li>
                     <li>
                         <span class="bold">작성자 :</span> 
                         <span style="margin-right:3%;"><?=$name?></span>
@@ -43,10 +43,10 @@ include "./inc/top.php";
                     </li>
                 </ul>
                 <div class="active">
-                    <button type="button" class=""><a href="./community.php">목록</a></button>
+                    <button type="button" class=""><a href="./license.php">목록</a></button>
                     <?php //로그인 한 회원과 글 작성자 와 동일할때 삭제 가능
                         if($_SESSION['userid'] == $name ){ ?>
-                            <button type="button" class=""><a href="./community_modify.php?num=<?=$param_num?>&mode=update">수정</a></button>
+                            <button type="button" class=""><a href="./license_modify.php?num=<?=$param_num?>&mode=update">수정</a></button>
                             <input type="submit" value="삭제">
                     <?php } ?>
                     
