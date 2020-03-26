@@ -4,7 +4,19 @@ include "./inc/dbconnect.php";
 include "./inc/left.php";
 include "./inc/top.php";
 
-    $param_num = $_GET['num'];
+    if(isset($_GET['num'])){
+        $param_num = $_GET['num'];
+    }
+    else{
+        echo "<script>location.href='./employment.php'</script>";
+    }
+    
+    if(isset($_GET['page'])){
+        $page = $_GET['page'];
+    }else{
+        $page = 1;
+    }
+
     $query = "select * from license where num = '".$param_num."'";
 
     mysqli_query($connect, $query);
@@ -43,10 +55,10 @@ include "./inc/top.php";
                     </li>
                 </ul>
                 <div class="active">
-                    <button type="button" class=""><a href="./license.php">목록</a></button>
+                    <button type="button" class=""><a href="./license.php?page=<?=$page?>">목록</a></button>
                     <?php //로그인 한 회원과 글 작성자 와 동일할때 삭제 가능
                         if($_SESSION['userid'] == $name ){ ?>
-                            <button type="button" class=""><a href="./license_modify.php?num=<?=$param_num?>&mode=update">수정</a></button>
+                            <button type="button" class=""><a href="./license_modify.php?num=<?=$param_num?>&page=<?=$page?>&mode=update">수정</a></button>
                             <input type="submit" value="삭제">
                     <?php } ?>
                     

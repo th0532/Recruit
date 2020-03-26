@@ -2,11 +2,11 @@
 include "./inc/dbconnect.php";
 include "./inc/left.php";
 include "./inc/top.php";
+include "./inc/paging.php";
 
-    $query = "select * from license order by num DESC";
-    mysqli_query($connect, $query);
+    $query = "SELECT * FROM license ORDER BY num DESC limit $s_point, $list";
+    $result = mysqli_query($connect, $query);
 
-    $result = mysqli_query($connect,$query);
     $i=0;
     while($row = mysqli_fetch_array($result)){
         $num[$i] = $row['num'];
@@ -50,8 +50,8 @@ include "./inc/top.php";
                     while($row = mysqli_fetch_array($result)){
                 ?>
                 <tr>
-                    <td><a href="./license_view.php?num=<?=$num[$i]?>"><?=$num[$i]?></a></td>
-                    <td><a href="./license_view.php?num=<?=$num[$i]?>"><?=$title[$i]?></a></td>
+                    <td><a href="./license_view.php?num=<?=$num[$i]?>&page=<?=$page?>"><?=$num[$i]?></a></td>
+                    <td><a href="./license_view.php?num=<?=$num[$i]?>&page=<?=$page?>"><?=$title[$i]?></a></td>
                     <td><?=$name[$i]?></td>
                     <td><?=$date_val[$i]?></td>
                     <td><?=$click[$i]?></td>
@@ -60,17 +60,6 @@ include "./inc/top.php";
             </table>
 
             <button class="insert"><a href="./license_write.php?mode=insert">글쓰기</a></button>
-
-            <div class="paging">
-                    <a href=""><<</a>
-                    <a href="">1</a>
-                    <a href="">2</a>
-                    <a href="">3</a>
-                    <a href="">4</a>
-                    <a href="">5</a>
-                    <a href="">>></a>
-            </div>
-            
         </div> <!--table_pc-->
 
 <!-- 모바일 버전을 위하여 -->
@@ -82,7 +71,7 @@ include "./inc/top.php";
                     while($row = mysqli_fetch_array($result)){
                 ?>
                 <li>
-                    <a href="./license_view.php?num=<?=$num[$i]?>">
+                    <a href="./license_view.php?num=<?=$num[$i]?>&page=<?=$page?>">
                         <p><?=$title[$i]?></p>
                         <div class="sub_text">
                             <span><?=$name[$i]?></span>
@@ -95,16 +84,13 @@ include "./inc/top.php";
                 <?php  $i++; } ?>
             </ul>
             <button class="insert"><a href="./license_write.php?mode=insert">글쓰기</a></button>
-
-            <div class="paging">
-                    <a href=""><<</a>
-                    <a href="">1</a>
-                    <a href="">2</a>
-                    <a href="">3</a>
-                    <a href="">>></a>
-            </div>
-
         </div> <!-- table_mb -->
+       
+        <!-- paging -->
+        <?php 
+            include "./inc/paging_content.php";
+        ?>
+         <!-- paging -->
 
     </div> <!-- section2 -->
     

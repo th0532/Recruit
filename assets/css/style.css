@@ -59,13 +59,11 @@
 }
 
 .paging {
-    display:block;
-    clear: right;
-    width:45%;
-    height:50px;
-    position:relative;
-    left:40%;
-    margin-top:10%;
+    display: block; 
+    width: 35%;
+    height: 50px;
+    margin-top: 6%;
+    margin-left: 43%;
 }
 
 .paging a {
@@ -101,8 +99,8 @@
         width:75%;
     }
     .paging {
-        width:55%;
-        left:33%;
+        margin-left: 36%;
+        width: 40%;
     }
 }
 
@@ -142,9 +140,9 @@
         margin-right:0%;
     }
     .paging {
-        width:60%;
-        position:relative;
-        left:30%;
+        margin-left: 38%;
+        margin-top: 15%;
+        width: 50%;
     }
 }
 
@@ -176,10 +174,14 @@
         padding-left:15px;
     }
     .paging{
-        height:50px;
+        margin-top: 20%;
+        margin-left: 30%;
+        width: 70%;
     }
     .paging a{
         padding:8px 10px;
+        padding: 8px 12px;
+        font-size: 1.1rem;
     }
     
 }

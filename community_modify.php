@@ -1,8 +1,19 @@
 <?php
+include "./inc/login_session.php";
 include "./inc/left.php";
 include "./inc/top.php";
 include "./inc/dbconnect.php";
 
+if(isset($_GET['page'])){
+    $page = $_GET['page'];
+}else{
+    $page = 1;
+}
+if(isset($_GET['page'])){
+    $page = $_GET['page'];
+}else{
+    $page = 1;
+}
     $mode = $_GET['mode'];
     $param_num = $_GET['num'];
     $query = "select * from community where num = '".$param_num."'";
@@ -11,10 +22,15 @@ include "./inc/dbconnect.php";
     $row = mysqli_fetch_array($result);
         $title = $row['title'];
         $content = $row['content'];
+        $name = $row['id'];
+        if($_SESSION['userid'] != $name ){ 
+            echo "접근자가 올바르지 않습니다.";
+            exit;
+        }   
 ?>  
 <link rel="stylesheet" href="./assets/css/write.css">
 
-<form action="./exec/write_exec.php?mode=<?=$mode?>&num=<?=$param_num?>" method ="post">
+<form action="./exec/write_exec.php?mode=<?=$mode?>&num=<?=$param_num?>&page=<?=$page?>" method ="post">
 <input type="hidden" value ="community" name="db_gubun" id="">
 <input type="hidden" value ="<?=$mode?>" name="mode" id="">
     <div class="content">
@@ -32,7 +48,7 @@ include "./inc/dbconnect.php";
             </ul>
             <div class="active">
                 <input type="submit" value="작성">
-                <button type="button" class=""><a href="./community.php">목록</a></button>
+                <button type="button" class=""><a href="./community_view.php?num=<?=$param_num?>&page=<?=$page?>">취소</a></button>
             </div>
 
         </div>

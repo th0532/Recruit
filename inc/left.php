@@ -22,17 +22,17 @@
             <div class="dropdown_employment">
                 <button>취업후기</button>
                 <ul class="list_hover_onoff">
-                    <li><a href="./employment.php">전체</a></li>
-                    <li><a href="./employment.php">유통, 무역</a></li>
-                    <li><a href="./employment.php">금융, 보험</a></li>
-                    <li><a href="./employment.php">의료, 보건</a></li>
-                    <li><a href="./employment.php">서비스</a></li>
-                    <li><a href="./employment.php">미디어, 문화</a></li>
-                    <li><a href="./employment.php">정보통신, IT</a></li>
-                    <li><a href="./employment.php">제조</a></li>
-                    <li><a href="./employment.php">건설</a></li>
-                    <li><a href="./employment.php">교육기관</a></li>
-                    <li><a href="./employment.php">공공기관, 공기업, 협회</a></li>
+                    <li><a href="./employment.php?category=1">전체</a></li>
+                    <li><a href="./employment.php?category=2">유통, 무역</a></li>
+                    <li><a href="./employment.php?category=3">금융, 보험</a></li>
+                    <li><a href="./employment.php?category=4">의료, 보건</a></li>
+                    <li><a href="./employment.php?category=5">서비스</a></li>
+                    <li><a href="./employment.php?category=6">미디어, 문화</a></li>
+                    <li><a href="./employment.php?category=7">정보통신, IT</a></li>
+                    <li><a href="./employment.php?category=8">제조</a></li>
+                    <li><a href="./employment.php?category=9">건설</a></li>
+                    <li><a href="./employment.php?category=10">교육기관</a></li>
+                    <li><a href="./employment.php?category=11">공공기관, 공기업, 협회</a></li>
                 </ul>
             </div>
         </div>
@@ -40,14 +40,14 @@
             <div class="dropdown_incruit">
                 <button>채용공고</button>
                 <ul class="list_hover_onoff">
-                    <li><a href="./incruit.php">전체</a></li>
-                    <li><a href="./incruit.php">대기업</a></li>
-                    <li><a href="./incruit.php">금융권</a></li>
-                    <li><a href="./incruit.php">중견기업</a></li>
-                    <li><a href="./incruit.php">중소기업</a></li>
-                    <li><a href="./incruit.php">해외기업</a></li>
-                    <li><a href="./incruit.php">스타트업</a></li>
-                    <li><a href="./incruit.php">인턴</a></li>
+                    <li><a href="./incruit.php?category=1">전체</a></li>
+                    <li><a href="./incruit.php?category=2">대기업</a></li>
+                    <li><a href="./incruit.php?category=3">금융권</a></li>
+                    <li><a href="./incruit.php?category=4">중견기업</a></li>
+                    <li><a href="./incruit.php?category=5">중소기업</a></li>
+                    <li><a href="./incruit.php?category=6">해외기업</a></li>
+                    <li><a href="./incruit.php?category=7">스타트업</a></li>
+                    <li><a href="./incruit.php?category=8">인턴</a></li>
                 </ul>
             </div>
         </div>

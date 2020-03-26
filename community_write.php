@@ -24,7 +24,7 @@ include "./inc/top.php";
             </ul>
             <div class="active">
                 <input type="submit" value="작성">
-                <button type="button" class=""><a href="./community.php">목록</a></button>
+                <button type="button" class=""><a href="./community.php?page=1">목록</a></button>
             </div>
 
         </div>

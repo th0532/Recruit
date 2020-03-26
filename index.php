@@ -12,7 +12,7 @@ include "./inc/top.php";
           <img src="./assets/img/list/list2.png" style="float:right;" alt="">
         </div>
         <div class="answer">
-          <a class="menu_a" href="./employment.php">
+          <a class="menu_a" href="./employment.php?start=0">
             <span>
               <p>취업후기</p><br>
               대기업, 중견기업, 중소기업, 공기업의 <br>
@@ -27,7 +27,7 @@ include "./inc/top.php";
           <img src="./assets/img/list/list4.png" style="float:right;" alt="">
         </div>
         <div class="answer">
-          <a class="menu_a" href="./incruit.php">
+          <a class="menu_a" href="./incruit.php?start=0">
             <span>
             <p>공채소식</p><br>
               대기업, 중견기업, 중소기업, 공기업의 <br>
@@ -42,7 +42,7 @@ include "./inc/top.php";
           <img src="./assets/img/list/list1.png" alt="">  
         </div>
         <div class="answer">
-          <a class="menu_a" href="./license.php">
+          <a class="menu_a" href="./license.php?start=0">
             <span >
               <p style>자격증후기</p><br>
               토익, 제2외국어, IT, 금융, 한국사, 컴활 등 <br> 
@@ -57,7 +57,7 @@ include "./inc/top.php";
           <img src="./assets/img/list/list3.png" style="float:right;" alt="">
         </div>
         <div class="answer">
-          <a class="menu_a" href="./community.php">
+          <a class="menu_a" href="./community.php?start=0">
             <span>
             <p>자유게시판</p><br>
               취업을 준비하는 다른 친구들과  <br>

@@ -17,8 +17,19 @@ if ($db_gubun == 'community'){
 else if ($db_gubun == 'license'){
     $query = "DELETE FROM license WHERE num ='".$param_num."'";
     $result = mysqli_query($connect,$query);
-echo "<script>location.href = '../license.php'</script>";
+    echo "<script>location.href = '../license.php'</script>";
 }
+else if ($db_gubun == 'employment'){
+    $query = "DELETE FROM employment WHERE num ='".$param_num."'";
+    $result = mysqli_query($connect,$query);
+    echo "<script>location.href = '../employment.php'</script>";
+}
+else if ($db_gubun == 'incruit'){
+    $query = "DELETE FROM incruit WHERE num ='".$param_num."'";
+    $result = mysqli_query($connect,$query);
+    echo "<script>location.href = '../incruit.php'</script>";
+}
+
 
 echo $db_gubun.$id.$date;
 

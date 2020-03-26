@@ -8,7 +8,7 @@ include "./inc/top.php";
         $param_num = $_GET['num'];
     }
     else{
-        echo "<script>location.href='./employment.php'</script>";
+        echo "<script>location.href='./incruit.php'</script>";
     }
     if(isset($_GET['category'])){
         $param_category = $_GET['category'];
@@ -21,7 +21,7 @@ include "./inc/top.php";
     }else{
         $page = 1;
     }
-    $query = "select * from employment where num = '".$param_num."'";
+    $query = "select * from incruit where num = '".$param_num."'";
 
     mysqli_query($connect, $query);
     $result = mysqli_query($connect,$query);
@@ -37,7 +37,7 @@ include "./inc/top.php";
 <link rel="stylesheet" href="./assets/css/view.css">
 
 <form action="./exec/delete_exec.php?num=<?=$param_num?>" method ="post">
-    <input type="hidden" value ="employment" name="db_gubun" id="">
+    <input type="hidden" value ="incruit" name="db_gubun" id="">
         <div class="content">
             <div class="section1">
                 <ul>
@@ -63,10 +63,10 @@ include "./inc/top.php";
                     </li>
                 </ul>
                 <div class="active">
-                    <button type="button" class=""><a href="./employment.php?category=<?=$param_category?>&page=<?=$page?>">목록</a></button>
+                    <button type="button" class=""><a href="./incruit.php?category=<?=$param_category?>&page=<?=$page?>">목록</a></button>
                     <?php //로그인 한 회원과 글 작성자 와 동일할때 삭제 가능
                         if($_SESSION['userid'] == $name ){ ?>
-                            <button type="button" class=""><a href="./employment_modify.php?num=<?=$param_num?>&category=<?=$param_category?>&page=<?=$page?>&mode=update">수정</a></button>
+                            <button type="button" class=""><a href="./incruit_modify.php?num=<?=$param_num?>&category=<?=$param_category?>&page=<?=$page?>&mode=update">수정</a></button>
                             <input type="submit" value="삭제">
                     <?php } ?>
                     
