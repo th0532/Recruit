@@ -68,3 +68,7 @@ include "./inc/dbconnect.php";
         </div>
     </div> <!-- content -->
 </form>
+
+<?php
+    include "./inc/footer.php";
+?>

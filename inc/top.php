@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+if(isset($_GET['search'])){$search_text = $_GET['search'];}else{$search_text ='';}
+if(isset($_GET['type'])){$search_type = $_GET['type'];}else{$search_type ='';}
+if(isset($_GET['mode'])){$mode_search = $_GET['mode'];}else{$mode_search ='';}
+?>
 <html>
 <head>
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>

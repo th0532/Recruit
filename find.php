@@ -43,25 +43,3 @@ include "./inc/top.php";
         </div>
     </div>
 </form>
-<!-- 
-        <div class="PASS">
-        <ul>
-                <li><p>이름</p></li>
-                <li><input style="width:30%;" type="text" name="name"> </li>
-                <li><p>휴대폰 번호</p></li>
-                <li>
-                    <input class="phone" type="text" name="phone1" placeholder=""> -
-                    <input class="phone" type="text" name="phone2" placeholder=""> -
-                    <input class="phone" type="text" name="phone3" placeholder="">
-                </li>
-                <li><p>아이디</p></li>
-                <li><input type="text" name="id" placeholder="ID 를 입력해 주세요"> </li>
-                <li><p>비밀번호</p></li>
-                <li><input type="password" name="pass" placeholder="PassWord 를 입력해 주세요"> </li>
-                <li><p>비밀번호 확인</p></li>
-                <li><input type="password" placeholder="PassWord 를 입력해 주세요"> </li>
-                
-                <li class="login_btn"><input type="submit" value="회원가입"></li>
-                <li class="signup_btn"><button><a href="./login.php">로그인 하러가기</a></button></li>
-            </ul>
-    </div> -->

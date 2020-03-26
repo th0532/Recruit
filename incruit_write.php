@@ -48,3 +48,7 @@ include "./inc/top.php";
         </div>
     </div> <!-- content -->
 </form>
+
+<?php
+    include "./inc/footer.php";
+?>

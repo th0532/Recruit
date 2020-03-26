@@ -55,7 +55,7 @@ include "./inc/top.php";
                     </li>
                 </ul>
                 <div class="active">
-                    <button type="button" class=""><a href="./license.php?page=<?=$page?>">목록</a></button>
+                    <button type="button" class=""><a href="./license.php?page=<?=$page?>&mode=search&type=<?=$search_type?>&search=<?=$search_text?>">목록</a></button>
                     <?php //로그인 한 회원과 글 작성자 와 동일할때 삭제 가능
                         if($_SESSION['userid'] == $name ){ ?>
                             <button type="button" class=""><a href="./license_modify.php?num=<?=$param_num?>&page=<?=$page?>&mode=update">수정</a></button>
@@ -66,3 +66,7 @@ include "./inc/top.php";
             </div>
         </div> <!-- content -->
 </form>
+
+<?php
+    include "./inc/footer.php";
+?>

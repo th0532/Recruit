@@ -77,3 +77,7 @@ include "./inc/top.php";
 ///// 모바일 네비게이션 on off
 
 </script>
+
+<?php
+    include "./inc/footer.php";
+?>

@@ -86,15 +86,4 @@ else if($db_gubun == 'incruit'){
     }
 }
 
-
-echo $db_gubun.$id.$date;
-
-
-
-
-
-
-
-
-
 ?>  

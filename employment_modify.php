@@ -74,3 +74,7 @@ include "./inc/function.php";
         </div>
     </div> <!-- content -->
 </form>
+
+<?php
+    include "./inc/footer.php";
+?>

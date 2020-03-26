@@ -54,3 +54,7 @@ if(isset($_GET['page'])){
         </div>
     </div> <!-- content -->
 </form>
+
+<?php
+    include "./inc/footer.php";
+?>
