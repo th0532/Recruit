@@ -61,6 +61,18 @@ include "./inc/function.php";
             <div class="title">
                 <a href="./incruit.php"><h1>채용공고</h1></a>
             </div>
+            <div class="category">
+                <select name="" id="">
+                    <option value="1" <?php if($param_category=='1'){ ?> selected <?php }?> >전체</option>
+                    <option value="2" <?php if($param_category=='2'){ ?> selected <?php }?> >대기업</option>
+                    <option value="3" <?php if($param_category=='3'){ ?> selected <?php }?> >금융권</option>
+                    <option value="4" <?php if($param_category=='4'){ ?> selected <?php }?> >중견기업</option>
+                    <option value="5" <?php if($param_category=='5'){ ?> selected <?php }?> >중소기업</option>
+                    <option value="6" <?php if($param_category=='6'){ ?> selected <?php }?> >해외기업</option>
+                    <option value="7" <?php if($param_category=='7'){ ?> selected <?php }?> >스타트업</option>
+                    <option value="8" <?php if($param_category=='7'){ ?> selected <?php }?> >인턴</option>
+                </select>
+            </div>
             <div class="search">
                 <select name="search_type"id="" >
                     <option value="1">제목</option>
@@ -145,3 +157,10 @@ include "./inc/function.php";
 <?php
     include "./inc/footer.php";
 ?>
+
+<script>
+    $('.category select').on('change',function(){
+        var category_value = $('.category select').val();
+        location.href = "./incruit.php?category="+category_value;
+    })
+</script>

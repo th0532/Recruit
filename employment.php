@@ -52,13 +52,28 @@ include "./inc/function.php";
 
 ?>  
 <link rel="stylesheet" href="./assets/css/style.css">
-<form action="./exec/search_exec.php" method ="POST">
+<form action="./exec/search_exec.php?category=<?=$param_category?>" method ="POST">
     <input type="hidden" value="employment" name="db_gubun">
     <input type="hidden" value=<?=$param_category?> name="param_category">
     <div class="content">
         <div class="section1">
             <div class="title">
                 <a href="./employment.php"><h1>취업후기</h1></a>
+            </div>
+            <div class="category">
+                <select name="" id="">
+                    <option value="1" <?php if($param_category=='1'){ ?> selected <?php }?> >전체</option>
+                    <option value="2" <?php if($param_category=='2'){ ?> selected <?php }?> >유통, 무역</option>
+                    <option value="3" <?php if($param_category=='3'){ ?> selected <?php }?> >금융, 보험</option>
+                    <option value="4" <?php if($param_category=='4'){ ?> selected <?php }?> >의료, 보건</option>
+                    <option value="5" <?php if($param_category=='5'){ ?> selected <?php }?> >서비스</option>
+                    <option value="6" <?php if($param_category=='6'){ ?> selected <?php }?> >미디어, 문화</option>
+                    <option value="7" <?php if($param_category=='7'){ ?> selected <?php }?> >정보통신, IT</option>
+                    <option value="8" <?php if($param_category=='8'){ ?> selected <?php }?> >제조</option>
+                    <option value="9" <?php if($param_category=='9'){ ?> selected <?php }?> >건설</option>
+                    <option value="10" <?php if($param_category=='10'){ ?> selected <?php }?>>교육기관</option>
+                    <option value="11" <?php if($param_category=='11'){ ?> selected <?php }?>>공공기관, 공기업</option>
+                </select>
             </div>
             <div class="search">
                 <select name="search_type"id="" >
@@ -143,3 +158,10 @@ include "./inc/function.php";
 <?php
     include "./inc/footer.php";
 ?>
+
+<script>
+    $('.category select').on('change',function(){
+        var category_value = $('.category select').val();
+        location.href = "./employment.php?category="+category_value;
+    })
+</script>

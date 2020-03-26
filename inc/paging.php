@@ -54,6 +54,7 @@ include "./inc/function.php";
             
             if($count == '0'){
                 $query = "SELECT num FROM employment ORDER BY num DESC";
+                
             }
         }// 카테고리 구분
         else{
@@ -143,6 +144,8 @@ include "./inc/function.php";
         $page = $pageNum;
         $s_page = $pageNum-2;
     }       
+
+    // 리스트 갯수 에 따라
     if ($count<10){
         $s_page = 1;
         $e_page = 1;
