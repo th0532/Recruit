@@ -31,6 +31,7 @@ include "./inc/paging.php";
 
         $i++;
     }
+    
 ?>  
 <link rel="stylesheet" href="./assets/css/style.css">
 <form action="./exec/search_exec.php" method ="POST">
@@ -78,7 +79,7 @@ include "./inc/paging.php";
                     <?php  $i++; } ?>
                 </table>
 
-                <button class="insert"><a href="./community_write.php?mode=insert">글쓰기</a></button>
+                <button type="button" class="insert"><a href="./community_write.php?mode=insert">글쓰기</a></button>
 
                 
             </div> <!--table_pc-->
@@ -105,7 +106,7 @@ include "./inc/paging.php";
 
                     <?php  $i++; } ?>
                 </ul>
-                <button class="insert"><a href="./community_write.php?mode=insert">글쓰기</a></button>
+                <button type="button" class="insert"><a href="./community_write.php?mode=insert">글쓰기</a></button>
             </div> <!-- table_mb -->
 
                 <!-- paging -->

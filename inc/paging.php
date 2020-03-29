@@ -145,16 +145,17 @@ include "./inc/function.php";
         $s_page = $pageNum-2;
     }       
 
+    //  리스트 수 적을때 블록이동 >> << 오류 예외처리
     // 리스트 갯수 에 따라
-    if ($count<10){
+    if ($count<11){
         $s_page = 1;
         $e_page = 1;
     }
-    else if ($count<20){
+    else if ($count<21){
         $s_page = 1;
         $e_page = 2;
     }
-    else if ($count<30){
+    else if ($count<31){
         $s_page = 1;
         $e_page = 3;
      }

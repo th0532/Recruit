@@ -1,11 +1,12 @@
 <?php
+include "./inc/login_session.php";
 include "./inc/dbconnect.php";
 include "./inc/left.php";
 include "./inc/top.php";
 include "./inc/paging.php";
 include "./inc/function.php";
 
-    // 전체 카테고리는 db 에 따로 없기때문에 where 문 없이 쿼리
+
     // 전체 카테고리는 db 에 따로 없기때문에 where 문 없이 쿼리
     if($category_gubun == "전체"){
         // search 기능 위해서 쿼리구분
@@ -112,8 +113,14 @@ include "./inc/function.php";
                     <?php  $i++; } ?>
                 </table>
 
-                <button class="insert"><a href="./incruit_write.php?mode=insert&category=<?=$param_category?>">글쓰기</a></button>            
-            </div> <!--table_pc-->
+                <?php
+                if($_SESSION['userid'] == 'admin' ){ 
+                ?>
+                    <button type="button" class="insert"><a href="./incruit_write.php?mode=insert&category=<?=$param_category?>">글쓰기</a></button>
+                <?php
+                }
+                ?>
+                </div> <!--table_pc-->
 
     <!-- 모바일 버전을 위하여 -->
             <div class="table_mb">
@@ -140,7 +147,14 @@ include "./inc/function.php";
 
                     <?php  $i++; } ?>
                 </ul>
-                <button class="insert"><a href="./incruit_write.php?mode=insert&category=<?=$param_category?>">글쓰기</a></button>
+                <?php
+                if($_SESSION['userid'] == 'admin' ){ 
+                ?>
+                    <button type="button" class="insert"><a href="./incruit_write.php?mode=insert&category=<?=$param_category?>">글쓰기</a></button>
+                <?php
+                }
+                ?>
+
             </div> <!-- table_mb -->
 
                 <!-- paging -->

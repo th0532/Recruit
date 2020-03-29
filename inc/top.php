@@ -3,6 +3,34 @@
 if(isset($_GET['search'])){$search_text = $_GET['search'];}else{$search_text ='';}
 if(isset($_GET['type'])){$search_type = $_GET['type'];}else{$search_type ='';}
 if(isset($_GET['mode'])){$mode_search = $_GET['mode'];}else{$mode_search ='';}
+if(isset($_GET['page'])){
+    $page = $_GET['page'];
+}else{
+    $page = 1;
+}
+if(isset($_GET['type'])){
+    $type = $_GET['type'];
+}else{
+    $type = 1;
+}
+if(isset($_GET['search'])){
+    $search = $_GET['search'];
+}else{
+    $search = 1;
+}
+if(isset($_GET['category'])){
+    $param_category = $_GET['category'];
+}
+else{
+    $param_category = 1;
+}
+if(isset($_GET['num'])){
+    $param_num = $_GET['num'];
+}
+else{
+    $param_num = 1;
+}
+
 ?>
 <html>
 <head>

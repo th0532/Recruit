@@ -4,18 +4,8 @@ include "./inc/left.php";
 include "./inc/top.php";
 include "./inc/dbconnect.php";
 
-if(isset($_GET['page'])){
-    $page = $_GET['page'];
-}else{
-    $page = 1;
-}
-if(isset($_GET['page'])){
-    $page = $_GET['page'];
-}else{
-    $page = 1;
-}
     $mode = $_GET['mode'];
-    $param_num = $_GET['num'];
+    
     $query = "select * from community where num = '".$param_num."'";
     mysqli_query($connect, $query);
     $result = mysqli_query($connect,$query);

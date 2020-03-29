@@ -10,15 +10,20 @@ include "./inc/top.php";
             <ul>
                 <li><h2>ID 찾기</h2></li>
                 <li><p>이름</p></li>
-                <li><input style type="text" name="name"> </li>
+                <li><input  style="width:30%;" style type="text" name="name"> </li>
+                <li><p>주민등록 번호</p></li>
+                <li class="phone">
+                    <input type="text" maxlength=6 name="sec_number1" placeholder=""> &nbsp - &nbsp
+                    <input type="password" maxlength=7 name="sec_number2" placeholder="">
+                </li>
                 <li><p>휴대폰 번호</p></li>
                 <li class="phone">
-                    <input type="text" name="phone1" placeholder=""> &nbsp - &nbsp
-                    <input type="text" name="phone2" placeholder=""> &nbsp - &nbsp
-                    <input type="text" name="phone3" placeholder="">
+                    <input type="text" maxlength=3 name="phone1" placeholder=""> &nbsp - &nbsp
+                    <input type="text" maxlength=4 name="phone2" placeholder=""> &nbsp - &nbsp
+                    <input type="text" maxlength=4 name="phone3" placeholder="">
                 </li>
                 <li class="login_btn"><input type="submit" value="찾기"></li>
-                <li class="signup_btn"><button><a href="./login.php">로그인 하러가기</a></button></li>
+                <li class="signup_btn"><button type="button"><a href="./login.php">로그인 하러가기</a></button></li>
             </ul>
         </div>
     </div>
@@ -32,13 +37,19 @@ include "./inc/top.php";
             <ul>
                 <li><h2>PW 찾기</h2></li>
                 <li><p>이름</p></li>
-                <li><input type="text" name="name"> </li>
+                <li><input style="width:30%;" type="text" name="name"> </li>
+                <li><p>주민등록 번호</p></li>
+                <li class="phone">
+                    <input type="text" maxlength=6 name="sec_number1" placeholder=""> &nbsp - &nbsp
+                    <input type="password" maxlength=7 name="sec_number2" placeholder="">
+                </li>
                 <li><p>ID</p></li>
                 <li>
-                    <input type="text" name="id" placeholder="">
+                    <input style="width:98%;" type="text" name="id" placeholder="">
                 </li>
+                
                 <li class="login_btn"><input type="submit" value="찾기"></li>
-                <li class="signup_btn"><button><a href="./login.php">로그인 하러가기</a></button></li>
+                <li class="signup_btn"><button type="button"><a href="./login.php">로그인 하러가기</a></button></li>
             </ul>
         </div>
     </div>

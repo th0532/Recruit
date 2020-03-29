@@ -7,18 +7,6 @@ include "./inc/function.php";
 
     $mode = $_GET['mode'];
     $param_num = $_GET['num'];
-    if(isset($_GET['page'])){
-        $page = $_GET['page'];
-    }else{
-        $page = 1;
-    }
-    if(isset($_GET['category'])){
-        $param_category = $_GET['category'];
-    }
-    else{
-        $param_category = 1;
-    }
-
 
     $query = "select * from employment where num = '".$param_num."'";
     mysqli_query($connect, $query);

@@ -5,12 +5,7 @@ include "./inc/top.php";
 include "./inc/dbconnect.php";
 
     $mode = $_GET['mode'];
-    $param_num = $_GET['num'];
-    if(isset($_GET['page'])){
-        $page = $_GET['page'];
-    }else{
-        $page = 1;
-    }
+    
     $query = "select * from license where num = '".$param_num."'";
     mysqli_query($connect, $query);
     $result = mysqli_query($connect,$query);

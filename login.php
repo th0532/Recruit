@@ -14,7 +14,7 @@ include "./inc/top.php";
                 <li><input type="password" name="pass" placeholder="PassWord 를 입력해 주세요"> </li>
                 <li style="margin:10% 0%;" class="find"><a href="./find.php">ID/PW 찾기</a> </li>
                 <li style="margin:5% 0%;"class="login_btn"><input type="submit" value="로그인"></li>
-                <li class="signup_btn"><button><a href="./signup.php">회원가입</a></button></li>
+                <li class="signup_btn"><button type="button"><a href="./signup.php">회원가입</a></button></li>
             </ul>
         </div>
     </div>

@@ -42,7 +42,9 @@
     else if ($db_gubun == "signup"){            //gubun signup
         $date   = date("Y-m-d h:i:s", time());
         $name   = $_POST['name'];
-        $age    = $_POST['age'];
+        $sec_number1 = $_POST['sec_number1'];
+        $sec_number2 = $_POST['sec_number2'];
+        $sec_number = $sec_number1."-".$sec_number2;
         $phone1  = $_POST['phone1'];
         $phone2  = $_POST['phone2'];
         $phone3  = $_POST['phone3'];
@@ -50,7 +52,7 @@
         $id     = $_POST['id'];
         $pass   = $_POST['pass']; 
 
-        $query = "INSERT INTO login(num, date, name, age, phone, id, pass) VALUES ('','$date','$name','$age','$phone','$id','$pass')";
+        $query = "INSERT INTO login(num, date, name, sec_number, phone, id, pass) VALUES ('','$date','$name','$sec_number','$phone','$id','$pass')";
         $result = mysqli_query($connect,$query);
         ?>
 
@@ -61,16 +63,19 @@
     <?php
     }else if ($db_gubun == "find_id"){      // gubun find_id
         $name    = $_POST['name'];
+        $sec_number1    = $_POST['sec_number1'];
+        $sec_number2    = $_POST['sec_number2'];
+        $sec_number     = $sec_number1."-".$sec_number2;
         $phone1  = $_POST['phone1'];
         $phone2  = $_POST['phone2'];
         $phone3  = $_POST['phone3'];
         $phone = $phone1."-".$phone2."-".$phone3;
 
-        $query = "select * from login where name ='$name' AND phone ='$phone'";
+        $query = "select * from login where name ='$name' AND sec_number ='$sec_number' AND phone ='$phone'";
         $result = mysqli_query($connect,$query);
         $row = mysqli_fetch_array($result);
         
-        if($name == '' || $phone1 == '' || $phone2 == '' || $phone3 == '' ){
+        if($name == '' || $sec_number1 == '' || $sec_number2 == '' || $phone1 == '' || $phone2 == '' || $phone3 == '' ){
             echo "<script>window.alert('정보를 모두 입력하여주세요')</script>";
             echo "<script>location.href='../find.php';</script>";
         }
@@ -88,7 +93,10 @@
     }else if ($db_gubun == "find_pass"){   // gubun find_pass
             $name    = $_POST['name'];
             $id      = $_POST['id'];
-            $query = "select * from login where name ='$name' AND id ='$id'";
+            $sec_number1    = $_POST['sec_number1'];
+            $sec_number2    = $_POST['sec_number2'];
+            $sec_number     = $sec_number1."-".$sec_number2;
+            $query = "select * from login where name ='$name' AND sec_number ='$sec_number' AND id ='$id'";
             $result = mysqli_query($connect,$query);
             $row = mysqli_fetch_array($result);
             

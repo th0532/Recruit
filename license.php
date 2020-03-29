@@ -76,7 +76,7 @@ include "./inc/paging.php";
                     <?php  $i++; } ?>
                 </table>
 
-                <button class="insert"><a href="./license_write.php?mode=insert">글쓰기</a></button>
+                <button type="button" class="insert"><a href="./license_write.php?mode=insert">글쓰기</a></button>
             </div> <!--table_pc-->
 
     <!-- 모바일 버전을 위하여 -->
@@ -100,7 +100,7 @@ include "./inc/paging.php";
                     </li>
                     <?php  $i++; } ?>
                 </ul>
-                <button class="insert"><a href="./license_write.php?mode=insert">글쓰기</a></button>
+                <button type="button" class="insert"><a href="./license_write.php?mode=insert">글쓰기</a></button>
             </div> <!-- table_mb -->
         
             <!-- paging -->

@@ -10,6 +10,7 @@ $id         = $_SESSION['userid'];
 $date       = date("y:m:d h:i:s");
 $title      = $_POST['title'];
 $content    = $_POST['content'];
+
 if(isset($_GET['num'])){
     $param_num = $_GET['num'];
 }
@@ -20,6 +21,13 @@ if(isset($_GET['page'])){
     $page = $_GET['page'];
 }else{
     $page = 1;
+}
+
+if($title == '' || $content == ''){
+    echo "<script>window.alert('제목과 내용 모두 입력해주세요');</script>";
+    echo "<script>location.href = '../".$db_gubun."_write.php?mode=insert.php'</script>";
+    exit;
+    
 }
 //list view page 카테고리별 insert update
 if ($db_gubun == 'community'){
@@ -70,15 +78,14 @@ else if($db_gubun == 'employment'){
 }
 else if($db_gubun == 'incruit'){
     $category   = $_POST['category'];
-    $param_category =  $_GET['category'];
     if($mode=='insert'){
         $query = "INSERT INTO incruit(num, id, click, date, category, title, content) VALUES ('','$id','1','$date','$category','$title','$content')";
         $result = mysqli_query($connect,$query);
-
         echo "<script>location.href = '../incruit.php'</script>";
     }
     else if ($mode == 'update'){
         $param_num  = $_GET['num'];
+        $param_category =  $_GET['category'];
         $query = "UPDATE incruit SET date='$date',category='$category' , title='$title', content='$content' WHERE num = '$param_num' ";
         $result = mysqli_query($connect,$query);
         
