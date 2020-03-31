@@ -12,7 +12,7 @@ include "./inc/top.php";
 ?>  
 <link rel="stylesheet" href="./assets/css/write.css">
 
-<form action="./exec/write_exec.php?mode=<?=$mode?>" method ="post">
+<form action="./exec/write_exec.php?mode=<?=$mode?>" method ="post"  enctype="multipart/form-data">
 <input type="hidden" value ="incruit" name="db_gubun" id="">
 <input type="hidden" value ="<?=$mode?>" name="mode" id="">
     <div class="content">
@@ -22,8 +22,9 @@ include "./inc/top.php";
                 <li>
                     <span>구분</span>
                     <select name="category" id="">
+                    <option value="금융권">금융권</option>
+                    <option value="IT기업">IT기업</option>
                         <option value="대기업">대기업</option>
-                        <option value="금융권">금융권</option>
                         <option value="중견기업">중견기업</option>
                         <option value="중소기업">중소기업</option>
                         <option value="해외기업">해외기업</option>
@@ -34,6 +35,10 @@ include "./inc/top.php";
                 <li>
                     <span>제목</span>
                     <input type="text" maxlength=45 name="title" >
+                </li>
+                <li>
+                    <span>첨부파일</span>
+                    <input type="file" size=100 name="upload">
                 </li>
                 <li>
                     <p>내용</p>

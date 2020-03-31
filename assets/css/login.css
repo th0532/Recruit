@@ -69,6 +69,11 @@
     display: inline-block;
     width: 100%;
 }
+#check_id{
+    position:absolute;
+    height:35px;
+    left:67%;
+}
 .find{
     margin-top: 3%;
     width: 100%;
@@ -85,9 +90,13 @@
 width:30%;
 }
 @media (max-width: 1058px){
+    #check_id{
+        position:absolute;
+        height:35px;
+        left:72%;
+    }
 }
 @media (max-width: 768px){
-
     .login, .signup, .IDPASS{
         width:100%;
         margin:0 auto;

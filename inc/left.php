@@ -1,3 +1,4 @@
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 <link rel="stylesheet" href="./assets/css/left.css">
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <!-- mobile_navigation -->
@@ -41,13 +42,14 @@
                 <button>채용공고</button>
                 <ul class="list_hover_onoff">
                     <li><a href="./incruit.php?category=1">전체</a></li>
-                    <li><a href="./incruit.php?category=2">대기업</a></li>
-                    <li><a href="./incruit.php?category=3">금융권</a></li>
-                    <li><a href="./incruit.php?category=4">중견기업</a></li>
-                    <li><a href="./incruit.php?category=5">중소기업</a></li>
-                    <li><a href="./incruit.php?category=6">해외기업</a></li>
-                    <li><a href="./incruit.php?category=7">스타트업</a></li>
-                    <li><a href="./incruit.php?category=8">인턴</a></li>
+                    <li><a href="./incruit.php?category=2">금융권</a></li>
+                    <li><a href="./incruit.php?category=3">IT기업</a></li>
+                    <li><a href="./incruit.php?category=4">대기업</a></li>
+                    <li><a href="./incruit.php?category=5">중견기업</a></li>
+                    <li><a href="./incruit.php?category=6">중소기업</a></li>
+                    <li><a href="./incruit.php?category=7">해외기업</a></li>
+                    <li><a href="./incruit.php?category=8">스타트업</a></li>
+                    <li><a href="./incruit.php?category=9">인턴</a></li>
                 </ul>
             </div>
         </div>

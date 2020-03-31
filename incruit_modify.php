@@ -11,6 +11,7 @@ include "./inc/dbconnect.php";
     $result = mysqli_query($connect,$query);
     $row = mysqli_fetch_array($result);
         $title = $row['title'];
+        $img_name = $row['img'];
         $content = $row['content'];
         $category = $row['category'];
         $name = $row['id'];
@@ -21,7 +22,7 @@ include "./inc/dbconnect.php";
 ?>  
 <link rel="stylesheet" href="./assets/css/write.css">
 
-<form action="./exec/write_exec.php?mode=<?=$mode?>&num=<?=$param_num?>&category=<?=$param_category?>&page=<?=$page?>" method ="post">
+<form action="./exec/write_exec.php?mode=<?=$mode?>&num=<?=$param_num?>&category=<?=$param_category?>&page=<?=$page?>" method ="post"  enctype="multipart/form-data">
 <input type="hidden" value ="incruit" name="db_gubun" id="">
 <input type="hidden" value ="<?=$mode?>" name="mode" id="">
     <div class="content">
@@ -33,6 +34,7 @@ include "./inc/dbconnect.php";
                     <select name="category" id="">
                         <option value="대기업" <?php if($category == "대기업"){ ?>  selected <?php }?> >대기업</option>
                         <option value="금융권" <?php if($category == "금융권"){ ?>  selected <?php }?> >금융권</option>
+                        <option value="IT기업" <?php if($category == "IT기업"){ ?>  selected <?php }?> >IT기업</option>
                         <option value="중견기업" <?php if($category == "중견기업"){ ?>  selected <?php }?> >중견기업</option>
                         <option value="중소기업" <?php if($category == "중소기업"){ ?>  selected <?php }?> >중소기업</option>
                         <option value="해외기업" <?php if($category == "해외기업"){ ?>  selected <?php }?> >해외기업</option>
@@ -45,6 +47,17 @@ include "./inc/dbconnect.php";
                     <input type="text" value="<?=$title?>" maxlength=45 name="title" >
                 </li>
                 <li>
+                    <span>첨부파일</span>
+                    <input id ="img" type="file" size=100 name="upload">
+                </li>
+                <li>
+                        <?php
+                            if(strlen($img_name) !== 13){
+                        ?>
+                        <img style="width:100%;" src="./uploads/<?=$img_name?>"  alt="">
+                        <?php
+                        }
+                        ?>
                     <p>내용</p>
                     <textarea name="content" ><?=$content?></textarea>
                 </li>
@@ -61,3 +74,6 @@ include "./inc/dbconnect.php";
 <?php
     include "./inc/footer.php";
 ?>
+<script>
+
+</script>

@@ -14,3 +14,8 @@ echo "<script>$('.search input').val('".$search_text."');</script>";
 echo "<script>$('.search select').val('".$search_type."');</script>";
 
 ?>
+<script>
+//textarea 높이조절
+autosize($(".cotent_text"));
+
+</script>

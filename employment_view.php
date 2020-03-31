@@ -10,6 +10,13 @@ include "./inc/top.php";
     else{
         echo "<script>location.href='./employment.php'</script>";
     }
+    //로그인 된 ID
+    $now_id = $_SESSION['userid'];
+
+    // 조회수 업데이트
+    $query_update =  "update employment set click = click + 1 where num='$param_num'";
+    $result = mysqli_query($connect, $query_update);
+
 
     $query = "select * from employment where num = '".$param_num."'";
 
@@ -33,6 +40,7 @@ include "./inc/top.php";
 
 <form action="./exec/delete_exec.php?num=<?=$param_num?>" method ="post">
     <input type="hidden" value ="employment" name="db_gubun" id="">
+
         <div class="content">
             <div class="section1">
                 <ul>
@@ -54,7 +62,7 @@ include "./inc/top.php";
                         <span class="bold"><?=$title?></span>
                     </li>
                     <li>
-                        <span><?=$content?></span>
+                        <textarea class='cotent_text' readonly style="width:100%; height:35%; border: none; margin-top: 5%; padding: 0% 2%;"><?=$content?></textarea>
                     </li>
                 </ul>
                 <div class="active">
@@ -72,6 +80,8 @@ include "./inc/top.php";
 <!-- 댓글 -->
 <form action="./exec/comment_exec.php?num=<?=$param_num?>&category=<?=$param_category?>&page=<?=$page?>&type=<?=$page?>&search=<?=$search?>" method ="post">
     <input type="hidden" value ="employment" name="db_gubun" id="">
+    <input type="hidden" value ="<?=$now_id?>" name="" id="login">
+
         <div class="content">
             <div class="section1">
                 <ul >
@@ -94,10 +104,6 @@ include "./inc/top.php";
         </div> <!-- content -->
 </form>
 
-<?php
-    include "./inc/footer.php";
-?>
-
 <script>
 
     $( document ).ready(function() {
@@ -115,15 +121,42 @@ include "./inc/top.php";
                 array_location = 0;
                 $.each(args, function(a, b){
                     $.each(b.col, function(c,d){
-                        console.log(d)
+                        if(d.id == $('#login').val()){
                         var text = "";
-                        text  = "<li>"+  
-                                "    <span class='bold'>작성자: "+d.id+"</span></span><br>"+
-                                "    <p>"+d.content+"</p>"+
+                        text  = "<li style='padding: 2% 0%;' id='comment_list'>"+  
+                                "    <span style='margin-right:3%;' class='bold'>작성자: "+d.id+"</span>"+
+                                "    <span id='comment_date' class='bold'>시간: "+d.date+"</span><br>"+
+                                "    <span  style='float:left;margin-top:1%;'>"+d.content+"</span><br>"+
+                                "    <button type=button class = 'delete_comment' style='float:right;bottom: 15px;position: relative;' class='bold'>X</button>"+
                                 "</li>";
+                        }else{
+                            text  = "<li style='padding: 2% 0%;' id='comment_list'>"+  
+                                "    <span class='bold'>작성자: "+d.id+"</span><br>"+
+                                "    <span class=''>시간: "+d.date+"</span><br>"+
+                                "    <span style='float:left;margin-top:1%;'>"+d.content+"</span><br>"+
+                                "</li>";
+                        }
                         $(".comment").append(text);
                         array_location++;
                     })
+                })
+                $('.delete_comment').on('click', function(){
+                    var comment_date = $('#comment_date').html();
+                    var c = comment_date.substring(4,23)
+                    
+                    $.ajax({
+                        url: "./inc/comment_delete_ajax.php?num=<?=$param_num?>",
+                        dataType : 'text',
+                        type : "POST",
+                        data:{
+                            db_gubun:"employment",
+                            comment_date: c
+                        },
+                            success:function(args){
+                                alert('삭제되었습니다.');
+                                location.reload();
+                            }
+                        })
                 })
             },
                 // beforeSend:showRequest,

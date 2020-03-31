@@ -22,7 +22,8 @@ include "./dbconnect.php";
                 while($row = mysqli_fetch_array($result)){
                     $print_array[] = array(
                         "content" => $row["content"],
-                        "id" => $row["id"]
+                        "id" => $row["id"],
+                        "date" => $row["date"]
                     );
                     $result_array["col"] = $print_array;
                 }
@@ -44,7 +45,8 @@ include "./dbconnect.php";
                 while($row = mysqli_fetch_array($result)){
                     $print_array[] = array(
                         "content" => $row["content"],
-                        "id" => $row["id"]
+                        "id" => $row["id"],
+                        "date" => $row["date"]
                     );
                     $result_array["col"] = $print_array;
                 }
@@ -66,7 +68,8 @@ include "./dbconnect.php";
                 while($row = mysqli_fetch_array($result)){
                     $print_array[] = array(
                         "content" => $row["content"],
-                        "id" => $row["id"]
+                        "id" => $row["id"],
+                        "date" => $row["date"]
                     );
                     $result_array["col"] = $print_array;
                 }
@@ -88,7 +91,8 @@ include "./dbconnect.php";
                 while($row = mysqli_fetch_array($result)){
                     $print_array[] = array(
                         "content" => $row["content"],
-                        "id" => $row["id"]
+                        "id" => $row["id"],
+                        "date" => $row["date"]
                     );
                     $result_array["col"] = $print_array;
                 }

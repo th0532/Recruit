@@ -45,6 +45,7 @@
     border: 1px solid #aaaaaa;
     margin-left: 2%;
     font-size: 1rem;
+    -webkit-appearance: none;
 }
 .section1 > .active > button > a{
     color:black;

@@ -45,19 +45,21 @@ else if( $_SERVER['PHP_SELF'] == '/review/incruit.php' ) {
         switch($param_category){
         case 1: $category_gubun = "전체";
             break;
-        case 2: $category_gubun = "대기업";
+        case 2: $category_gubun = "금융권";
+        break;
+        case 3: $category_gubun = "IT기업";
+        break;
+        case 4: $category_gubun = "대기업";
             break;
-        case 3: $category_gubun = "금융권";
+        case 5: $category_gubun = "중견기업";
             break;
-        case 4: $category_gubun = "중견기업";
+        case 6: $category_gubun = "중소기업";
             break;
-        case 5: $category_gubun = "중소기업";
+        case 7: $category_gubun = "해외기업";
             break;
-        case 6: $category_gubun = "해외기업";
+        case 8: $category_gubun = "스타트업";
             break;
-        case 7: $category_gubun = "스타트업";
-            break;
-        case 8: $category_gubun = "인턴";
+        case 9: $category_gubun = "인턴";
             break;
         default:$category_gubun = "전체";
         }

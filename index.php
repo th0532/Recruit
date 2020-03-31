@@ -2,6 +2,7 @@
 include "./inc/login_session.php";
 include "./inc/left.php";
 include "./inc/top.php";
+
 ?>  
 <link rel="stylesheet" href="./assets/css/index.css">
 <div class="content">

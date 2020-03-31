@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+
 <?php
 if(isset($_GET['search'])){$search_text = $_GET['search'];}else{$search_text ='';}
 if(isset($_GET['type'])){$search_type = $_GET['type'];}else{$search_type ='';}
@@ -38,14 +40,17 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/top.css">
 
-    <title>Review</title>
+    <title>Employment</title>
 </head>
 
 <body>
     <div class="top">
         <div class="main_logo" >
-            <a href="./index.php" >Review</a>
+            <a href="./index.php" >Employment</a>
         </div>
     </div>
 </body>
 </html>
+
+<!-- textarea 높이조절 -->
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>

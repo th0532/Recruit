@@ -8,11 +8,9 @@ $query = "select id from login";
     $member_id='';
 
     while($row = mysqli_fetch_array($result)){
-        
         $member_id_row = $row['id'];
         $member_id .= $member_id_row."#";
     }  
-
 
 ?>  
 <style>
@@ -76,7 +74,8 @@ $query = "select id from login";
                 </li>
                 <li><p>아이디</p></li>
                 <!-- Trigger/Open The Modal -->
-                <button id = "check_id" type=button style="position:absolute; height:35px; left:67%;" id="myBtn">중복체크</button>
+                <button id = "check_id" type=button id="myBtn">중복체크</button>
+                <li><input id="check_id_ok" type="hidden" value="no"> </li>
                 <li><input id="id" type="text" name="id" placeholder="ID 를 입력해 주세요"> </li>
                 <li><p>비밀번호</p></li>
                 <li><input type="password" name="pass" id ="password1" placeholder="PassWord 를 입력해 주세요"> </li>
@@ -105,31 +104,6 @@ $query = "select id from login";
 </form> -->
 
 <?php 
-// echo "<script>$('#check_id').on('click', function(){
-//     var test ='admin#th0532';
-//     var test_arr = test.split('#');
-//     var check_id = $('#id').val();
-//     for(var i=0; i<test_arr.length; i++){
-//         if(check_id == 'th0532'){
-//             check_flag =0;
-//         }
-//         else{
-//             check_flag =1;
-//         }
-//     }
-    
-//     if(check_id ==''){
-//         alert('ID란을 입력해주세요.');
-//     }
-//     else if(check_flag == 0 ){
-//         alert('사용중인 ID 입니다.');
-//     }
-//     else{
-//         alert('사용가능한 ID 입니다');
-//     }
-
-//     });</script>";
-
 echo "<script>
 $('#check_id').on('click', function(){
     var getCheck= RegExp(/^[a-zA-Z0-9]{4,12}$/);
@@ -153,22 +127,22 @@ $('#check_id').on('click', function(){
 
     if(check_id ==''){
         alert('ID란을 입력해주세요.');
+        $('#check_id_ok').val('no');
     }
     else if(check_flag == 0 ){
         alert('사용중인 ID 입니다.');
         $('#id').val('');
-        var check_flag_OK =0;
+        $('#check_id_ok').val('no');
 
     }
     else if (check_flag == 1 ){
         if(!getCheck.test($('#id').val())){
             alert('4글자 이하, 한글및 특수기호는 입력하실 수 없습니다.');
             $('#id').val('');
-            var check_flag_OK = 0;
-
+            $('#check_id_ok').val('no');
         }else{
             alert('사용가능한 ID 입니다');
-            var check_flag_OK =1;
+            $('#check_id_ok').val('yes');
         }
     }
 })
@@ -217,8 +191,14 @@ function formChk(){
         alert("패스워드가 일치하지 않습니다.");
         $('#password1').val('');
         $('#password2').val('');
-
-    }else if(check_flag_OK !== 1){
+    }
+    else if(password1.length < 6 || password2.length < 6){
+        alert("패스워드를 6자리 이상으로 입력해주세요");
+        $('#password1').val('');
+        $('#password2').val('');
+    }
+    
+    else if($('#check_id_ok').val() == 'no'){
         alert("ID 중복체크를 확인해주세요");
     }
     else{

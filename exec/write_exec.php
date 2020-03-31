@@ -1,3 +1,4 @@
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 <?php
 include "../inc/login_session.php";
 include "../inc/dbconnect.php";
@@ -8,6 +9,7 @@ $mode       = $_GET['mode'];
 $db_gubun   = $_POST['db_gubun'];
 $id         = $_SESSION['userid'];
 $date       = date("y:m:d h:i:s");
+$date_img       = date("ymdhis");
 $title      = $_POST['title'];
 $content    = $_POST['content'];
 
@@ -23,8 +25,8 @@ if(isset($_GET['page'])){
     $page = 1;
 }
 
-if($title == '' || $content == ''){
-    echo "<script>window.alert('제목과 내용 모두 입력해주세요');</script>";
+if($title == ''){
+    echo "<script>window.alert('제목을 입력해주세요');</script>";
     echo "<script>location.href = '../".$db_gubun."_write.php?mode=insert.php'</script>";
     exit;
     
@@ -79,14 +81,31 @@ else if($db_gubun == 'employment'){
 else if($db_gubun == 'incruit'){
     $category   = $_POST['category'];
     if($mode=='insert'){
-        $query = "INSERT INTO incruit(num, id, click, date, category, title, content) VALUES ('','$id','1','$date','$category','$title','$content')";
+
+        $uploadfile = $_FILES['upload']['name'];
+        $upload_name = $date_img."_".$uploadfile;
+        if(move_uploaded_file($_FILES['upload']['tmp_name'], "../uploads/".$upload_name)){
+        } else {
+            echo "<script>window.alert('이미지는 등록에 실패했습니다.');</script>";
+        }
+
+        $query = "INSERT INTO incruit(num, id, img, click, date, category, title, content) VALUES ('','$id','$upload_name','1','$date','$category','$title','$content')";
         $result = mysqli_query($connect,$query);
+
         echo "<script>location.href = '../incruit.php'</script>";
     }
     else if ($mode == 'update'){
         $param_num  = $_GET['num'];
         $param_category =  $_GET['category'];
-        $query = "UPDATE incruit SET date='$date',category='$category' , title='$title', content='$content' WHERE num = '$param_num' ";
+
+        $uploadfile = $_FILES['upload']['name'];
+        $upload_name = $date_img."_".$uploadfile;
+        if(move_uploaded_file($_FILES['upload']['tmp_name'], "../uploads/".$upload_name)){
+        } else {
+            echo "<script>window.alert('이미지는 등록에 실패했습니다.');</script>";
+        }
+
+        $query = "UPDATE incruit SET date='$date',category='$category' , title='$title',img='$upload_name', content='$content' WHERE num = '$param_num' ";
         $result = mysqli_query($connect,$query);
         
         echo "<script>location.href = '../incruit_view.php?num=".$param_num."&category=".$param_category."&page=".$page."'</script>";

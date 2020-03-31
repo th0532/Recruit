@@ -1,8 +1,8 @@
 <?php
 include "./inc/login_session.php";
+include "./inc/dbconnect.php";
 include "./inc/left.php";
 include "./inc/top.php";
-include "./inc/dbconnect.php";
 include "./inc/function.php";
 
     $mode = $_GET['mode'];

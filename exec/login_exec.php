@@ -1,13 +1,7 @@
-
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 <?php
     session_start();
-    $localhost = 'localhost';
-    $dbname = 'review';
-    $id = 'root';
-    $pass = '';
-
-    $connect = mysqli_connect($localhost, $id, $pass, $dbname) or die ('connect error');
-    $connectResult = mysqli_select_db($connect, $dbname);
+    include "../inc/dbconnect.php";
 
     $db_gubun = $_POST['db_gubun'];
 
@@ -40,7 +34,7 @@
 
 // 회원가입
     else if ($db_gubun == "signup"){            //gubun signup
-        $date   = date("Y-m-d h:i:s", time());
+        $date   = date("Y-m-d H:i:s");
         $name   = $_POST['name'];
         $sec_number1 = $_POST['sec_number1'];
         $sec_number2 = $_POST['sec_number2'];
@@ -51,13 +45,34 @@
         $phone = $phone1."-".$phone2."-".$phone3;
         $id     = $_POST['id'];
         $pass   = $_POST['pass']; 
+        
+        //id 중복 오류 체크
+        $query = "select id,sec_number from login";
+        mysqli_query($connect, $query);
+        $result = mysqli_query($connect,$query);
+
+        while($row = mysqli_fetch_array($result)){
+            $member_id = $row['id'];
+            $member_sec_number = $row['sec_number'];
+
+            if($member_id == $id){
+                echo "<script>window.alert('접근오류 입니다.');</script>";
+                echo "<script>location.href='../login.php';</script>";
+                exit;
+            }
+            if($member_sec_number == $sec_number){
+                echo "<script>window.alert('이미 가입된 회원입니다.');</script>";
+                echo "<script>location.href='../login.php';</script>";
+                exit;
+            }
+        }  
 
         $query = "INSERT INTO login(num, date, name, sec_number, phone, id, pass) VALUES ('','$date','$name','$sec_number','$phone','$id','$pass')";
         $result = mysqli_query($connect,$query);
         ?>
 
         <script>
-        // 회원가입시
+        // 회원가입완료시
             location.href = "../login.php";
         </script>
     <?php
@@ -88,7 +103,7 @@
             $name_res = $row['name'];
 
             echo "<script>window.alert('".$name_res." 님의 ID는 ".$id_res." 입니다.')</script>";
-            echo "<script>location.href='../login.php';</script>";
+            echo "<script>location.href='../find.php';</script>";
         }
     }else if ($db_gubun == "find_pass"){   // gubun find_pass
             $name    = $_POST['name'];
