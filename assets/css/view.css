@@ -42,12 +42,10 @@
     height: 30px;
     background-color: white;
     float: right;
-    /* margin-top: 2%; */
-    margin-bottom: 5%;
     border: 1px solid #aaaaaa;
     margin-left: 2%;
     font-size: 1rem;
-    -webkit-appearance: none;
+    text-align: center;
 }
 .section1 > .active > button > a {
     color:black;
@@ -60,6 +58,14 @@
 .active{
     width: 82%;
     height:10%;
+}
+.delete_comment{
+    float: right;
+    bottom: 17px;
+    position: relative;
+    width: 25px;
+    font-weight: 600;
+    height: 25px;
 }
 
 @media (max-width: 768px){

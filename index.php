@@ -1,5 +1,5 @@
 <?php
-include "./inc/login_session.php";
+session_start();
 include "./inc/left.php";
 include "./inc/top.php";
 
@@ -10,7 +10,7 @@ include "./inc/top.php";
     <ul>
       <li>
         <div class="menu_img">
-          <img src="./assets/img/list/list2.png" style="float:right;" alt="">
+          <img src="./assets/img/list/list1.jpg" style="float:right;" alt="">
         </div>
         <div class="answer">
           <a class="menu_a" href="./employment.php?start=0">
@@ -25,7 +25,7 @@ include "./inc/top.php";
       </li>
       <li>
         <div class="menu_img">
-          <img src="./assets/img/list/list4.png" style="float:right;" alt="">
+          <img src="./assets/img/list/list2.jpg" style="float:right;" alt="">
         </div>
         <div class="answer">
           <a class="menu_a" href="./incruit.php?start=0">
@@ -40,7 +40,7 @@ include "./inc/top.php";
       </li>
       <li>
         <div class="menu_img">
-          <img src="./assets/img/list/list1.png" alt="">  
+          <img src="./assets/img/list/list3.png" alt="">  
         </div>
         <div class="answer">
           <a class="menu_a" href="./license.php?start=0">
@@ -55,7 +55,7 @@ include "./inc/top.php";
       </li>
       <li>
         <div class="menu_img">
-          <img src="./assets/img/list/list3.png" style="float:right;" alt="">
+          <img src="./assets/img/list/list4.png" style="float:right;" alt="">
         </div>
         <div class="answer">
           <a class="menu_a" href="./community.php?start=0">
@@ -71,7 +71,7 @@ include "./inc/top.php";
     </ul>
   </div>
   <div class="menu_content">
-    <img src="./assets/img/bg/bg_1.png" height=95%; width=95%; alt="">
+    <img src="./assets/img/bg/bg_1.jpg" height=95%; width=95%; alt="">
   </div>
 </div>
 <script>

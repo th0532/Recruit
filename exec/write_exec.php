@@ -8,33 +8,27 @@ include "../inc/function.php";
 $mode       = $_GET['mode'];
 $db_gubun   = $_POST['db_gubun'];
 $id         = $_SESSION['userid'];
-$date       = date("y:m:d h:i:s");
-$date_img       = date("ymdhis");
+$date       = date("y:m:d H:i:s");
+$date_img       = date("ymdHis");
 $title      = $_POST['title'];
-$content    = $_POST['content'];
+$title      = htmlspecialchars($title,ENT_QUOTES,'UTF-8');
 
-if(isset($_GET['num'])){
-    $param_num = $_GET['num'];
-}
-else{
-    $param_num =1;
-}
-if(isset($_GET['page'])){
-    $page = $_GET['page'];
-}else{
-    $page = 1;
-}
+$content    = $_POST['content'];
+$content      = htmlspecialchars($content,ENT_QUOTES,'UTF-8');
+
+
+if(isset($_GET['num'])){$param_num = $_GET['num'];}else{$param_num =1;}
+if(isset($_GET['page'])){$page = $_GET['page'];}else{$page = 1;}
 
 if($title == ''){
     echo "<script>window.alert('제목을 입력해주세요');</script>";
     echo "<script>location.href = '../".$db_gubun."_write.php?mode=insert.php'</script>";
     exit;
-    
 }
 //list view page 카테고리별 insert update
 if ($db_gubun == 'community'){
     if($mode=='insert'){
-        $query = "INSERT INTO community(num, id, click, date, title, content) VALUES ('','$id','1','$date','$title','$content')";
+        $query = "INSERT INTO community( id, click, date, title, content) VALUES ('$id','0','$date','$title','$content')";
         $result = mysqli_query($connect,$query);
 
         echo "<script>location.href = '../community.php'</script>";
@@ -48,7 +42,7 @@ if ($db_gubun == 'community'){
 }
 else if($db_gubun == 'license'){
     if($mode=='insert'){
-        $query = "INSERT INTO license(num, id, click, date, title, content) VALUES ('','$id','1','$date','$title','$content')";
+        $query = "INSERT INTO license( id, click, date, title, content) VALUES ('$id','0','$date','$title','$content')";
         $result = mysqli_query($connect,$query);
 
         echo "<script>location.href = '../license.php'</script>";
@@ -64,7 +58,7 @@ else if($db_gubun == 'employment'){
     $category   = $_POST['category'];
 
     if($mode=='insert'){
-        $query = "INSERT INTO employment(num, id, click, date, category, title, content) VALUES ('','$id','1','$date','$category','$title','$content')";
+        $query = "INSERT INTO employment( id, click, date, category, title, content) VALUES ('$id','0','$date','$category','$title','$content')";
         $result = mysqli_query($connect,$query);
         echo "<script>location.href = '../employment.php'</script>";
     }
@@ -89,7 +83,7 @@ else if($db_gubun == 'incruit'){
             echo "<script>window.alert('이미지는 등록에 실패했습니다.');</script>";
         }
 
-        $query = "INSERT INTO incruit(num, id, img, click, date, category, title, content) VALUES ('','$id','$upload_name','1','$date','$category','$title','$content')";
+        $query = "INSERT INTO incruit( id, img, click, date, category, title, content) VALUES ('$id','$upload_name','0','$date','$category','$title','$content')";
         $result = mysqli_query($connect,$query);
 
         echo "<script>location.href = '../incruit.php'</script>";

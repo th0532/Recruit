@@ -22,16 +22,17 @@
 }
 .side_menu_content button{
     width:60%;
-    background-color:black;
+    background-color: rgb(24,24,28);
     color:white;
     height:50px;
+    border:solid 1px white;
 }
 .side_menu_content button a{
     display:inline-block;
     width:100%;
     height:100%;
     color:white;
-    font-size:0.85rem;
+    font-size:1rem;
     margin-top:10%;
 }
 .nav {

@@ -28,6 +28,7 @@
     float:right;
     padding-top:2%;
     text-align: right;
+    width:45%;
 }
 .search > input{
     width:54%;
@@ -36,11 +37,14 @@
     font-size:0.9rem;
 }
 .search > select{
-    height: 30px;
+    height: 32px;
 }
 .search > button{
     width: 50px;
     height: 30px;
+    float:none;
+    background: #eeeeee;
+    border: solid 1px #cccccc;
 }
 .section2 > .table_pc > table{
     width: 80%;
@@ -50,6 +54,9 @@
     border-top:2px solid #cccccc;
     border-bottom:2px solid #cccccc;
     border-collapse:collapse;
+}
+.section2 > .table_pc > table  tr:hover{
+    background-color:#dddddd;
 }
 .section2 > .table_pc > table tr th{
     border-top:2px solid #cccccc;
@@ -92,7 +99,7 @@
     float:right;
     margin-top:2%;
     margin-right:8%;
-    border:2px solid aaaaaa;
+    border:1px solid #aaaaaa;
 }
 .insert > a{
     color:black;

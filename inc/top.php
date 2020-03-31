@@ -10,28 +10,15 @@ if(isset($_GET['page'])){
 }else{
     $page = 1;
 }
-if(isset($_GET['type'])){
-    $type = $_GET['type'];
-}else{
-    $type = 1;
-}
-if(isset($_GET['search'])){
-    $search = $_GET['search'];
-}else{
-    $search = 1;
-}
+if(isset($_GET['type'])){$type = $_GET['type'];}else{$type = 1;}
+if(isset($_GET['search'])){$search = $_GET['search'];}else{$search = 1;}
 if(isset($_GET['category'])){
     $param_category = $_GET['category'];
 }
 else{
     $param_category = 1;
 }
-if(isset($_GET['num'])){
-    $param_num = $_GET['num'];
-}
-else{
-    $param_num = 1;
-}
+if(isset($_GET['num'])){$param_num = $_GET['num'];}else{$param_num = 1;}
 
 ?>
 <html>
@@ -40,13 +27,27 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/top.css">
 
-    <title>Employment</title>
+    <title>Recruit</title>
 </head>
-
+<style>
+input,button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    box-sizing: content-box;
+}
+input{
+    all:unset;
+    border:1px solid rgb(169, 169, 169);
+}
+</style>
 <body>
     <div class="top">
         <div class="main_logo" >
-            <a href="./index.php" >Employment</a>
+            <a href="./index.php" >Recruit</a>
         </div>
     </div>
 </body>

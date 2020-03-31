@@ -63,7 +63,7 @@ include "./inc/dbconnect.php";
                 </li>
             </ul>
             <div class="active">
-                <input type="submit" value="작성">
+                <input type="submit" value="수정">
                 <button type="button" class=""><a href="./incruit_view.php?num=<?=$param_num?>&page=<?=$page?>">취소</a></button>
             </div>
 

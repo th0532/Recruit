@@ -1,5 +1,6 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 <?php
+session_start();
 include "./inc/dbconnect.php";
 include "./inc/left.php";
 include "./inc/top.php";

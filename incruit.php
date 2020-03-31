@@ -1,5 +1,7 @@
+
 <?php
-include "./inc/login_session.php";
+session_start();
+
 include "./inc/dbconnect.php";
 include "./inc/left.php";
 include "./inc/top.php";
@@ -115,10 +117,12 @@ include "./inc/function.php";
                 </table>
 
                 <?php
-                if($_SESSION['userid'] == 'admin' ){ 
+                if(isset($_SESSION['userid'])) {
+                    if($_SESSION['userid'] == 'admin' ){ 
                 ?>
                     <button type="button" class="insert"><a href="./incruit_write.php?mode=insert&category=<?=$param_category?>">글쓰기</a></button>
                 <?php
+                    }
                 }
                 ?>
                 </div> <!--table_pc-->

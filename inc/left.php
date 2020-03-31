@@ -9,7 +9,16 @@
 
 <!-- login -->
     <div class="login">
+        <?php
+            if(!isset($_SESSION['userid'])) {
+        ?>
+        <a href="./login.php">login</a>
+        <?php
+            }else{
+        ?>
         <a href="./logout.php">logout</a>
+        <?php } 
+        ?>
     </div>
 <!-- logo -->
     <div class="logo_box">

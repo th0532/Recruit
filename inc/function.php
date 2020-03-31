@@ -1,7 +1,7 @@
 <?php
 
 // url로 구분하여 쿼리 변경 
-if( $_SERVER['PHP_SELF'] == '/review/employment.php' ) {
+if( $_SERVER['PHP_SELF'] == '/recruit/employment.php' ) {
         
     if(!isset($_GET['category'])){
         $param_category = 1;
@@ -35,7 +35,7 @@ if( $_SERVER['PHP_SELF'] == '/review/employment.php' ) {
             default:     $category_gubun = "전체";
         }
 }
-else if( $_SERVER['PHP_SELF'] == '/review/incruit.php' ) {
+else if( $_SERVER['PHP_SELF'] == '/recruit/incruit.php' ) {
     //category get 값 체크 후 카테고리 기능 구현
     if(!isset($_GET['category'])){
         $param_category = 1;

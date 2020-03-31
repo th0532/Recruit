@@ -116,7 +116,6 @@ include "./inc/top.php";
                 db_gubun:"employment",
             },
             success:function(args){
-                console.log(args);
                 //배열 위치
                 array_location = 0;
                 $.each(args, function(a, b){
@@ -125,9 +124,9 @@ include "./inc/top.php";
                         var text = "";
                         text  = "<li style='padding: 2% 0%;' id='comment_list'>"+  
                                 "    <span style='margin-right:3%;' class='bold'>작성자: "+d.id+"</span>"+
-                                "    <span id='comment_date' class='bold'>시간: "+d.date+"</span><br>"+
+                                "    <span id='comment_date"+array_location+"' class='bold'>시간: "+d.date+"</span><br>"+
                                 "    <span  style='float:left;margin-top:1%;'>"+d.content+"</span><br>"+
-                                "    <button type=button class = 'delete_comment' style='float:right;bottom: 15px;position: relative;' class='bold'>X</button>"+
+                                "    <button class='delete_comment' type=button id = '"+array_location+"' style='float:right;bottom: 15px;position: relative;' class='bold'>X</button>"+
                                 "</li>";
                         }else{
                             text  = "<li style='padding: 2% 0%;' id='comment_list'>"+  
@@ -141,7 +140,8 @@ include "./inc/top.php";
                     })
                 })
                 $('.delete_comment').on('click', function(){
-                    var comment_date = $('#comment_date').html();
+                    var val = $(this).attr('id');
+                    var comment_date = $('#comment_date'+val).html();
                     var c = comment_date.substring(4,23)
                     
                     $.ajax({
@@ -153,6 +153,7 @@ include "./inc/top.php";
                             comment_date: c
                         },
                             success:function(args){
+                                console.log(args);
                                 alert('삭제되었습니다.');
                                 location.reload();
                             }

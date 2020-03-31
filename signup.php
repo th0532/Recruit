@@ -60,27 +60,39 @@ $query = "select id from login";
         <div class="signup">
         <ul>
                 <li><p>이름</p></li>
-                <li><input id='name' style="width:30%;" type="text" name="name"> </li>
-                <li><p>주민등록번호</p></li>
-                <li class="phone">
-                    <input type="text" id = 'sec_number1' name="sec_number1" maxlength=6 placeholder=""> &nbsp - &nbsp
-                    <input type="password" id = 'sec_number2' name="sec_number2" maxlength=7>
-                </li>
-                <li><p>휴대폰 번호</p></li>
-                <li class="phone">
-                    <input type="text" id = 'phone1' name="phone1" maxlength=3 placeholder=""> &nbsp - &nbsp
-                    <input type="text" id = 'phone2' name="phone2" maxlength=4 placeholder=""> &nbsp - &nbsp
-                    <input type="text" id = 'phone3' name="phone3" maxlength=4 placeholder="">
-                </li>
+                <li><input id='name'  type="text" name="name"> </li>
+                
                 <li><p>아이디</p></li>
-                <!-- Trigger/Open The Modal -->
                 <button id = "check_id" type=button id="myBtn">중복체크</button>
                 <li><input id="check_id_ok" type="hidden" value="no"> </li>
-                <li><input id="id" type="text" name="id" placeholder="ID 를 입력해 주세요"> </li>
+                <li><input id="id" type="text" name="id"> </li>
+                
                 <li><p>비밀번호</p></li>
-                <li><input type="password" name="pass" id ="password1" placeholder="PassWord 를 입력해 주세요"> </li>
+                <li><input type="password" name="pass" id ="password1" > </li>
+                
                 <li><p>비밀번호 확인</p></li>
-                <li><input type="password" id ="password2" placeholder="PassWord 를 입력해 주세요"> </li>
+                <li><input type="password" id ="password2" > </li>
+                
+                <li><p>휴대폰 번호</p></li>
+                <li class="phone">
+                    <input type="text" id = 'phone1' name="phone1" minlength=3 maxlength=3 placeholder=""> &nbsp - &nbsp
+                    <input type="text" id = 'phone2' name="phone2" minlength=4 maxlength=4 placeholder=""> &nbsp - &nbsp
+                    <input type="text" id = 'phone3' name="phone3" minlength=4 maxlength=4 placeholder="">
+                </li>
+                
+                <li><p>Email</p></li>
+                <li class="email">
+                    <input type="text" id = 'email1' name="email1" maxlength="20" placeholder=""> @
+                    <input type="text" id = 'email2' name="email2" maxlength="20" placeholder=""> 
+                    <!-- <select name="email2" id="email2" style=" height:35px;">
+                        <option value="naver.com" >naver.com</option>
+                        <option value="google.com" >google.com</option>
+                        <option value="daum.net" >daum.net</option>
+                        <option value="nate.com" >nate.com</option>
+                        <option value="직접입력" >직접입력</option>
+                    </select> -->
+                    <!-- <input type="text" id = 'email2' name="email2" > -->
+                </li>
                 
                 <li class="login_btn"><input type="submit" value="회원가입"></li>
                 <li class="signup_btn"><button type="button"><a href="./login.php">로그인 하러가기</a></button></li>
@@ -151,6 +163,7 @@ $('#check_id').on('click', function(){
 <script>
 function formChk(){
     var getCheck= RegExp(/^[a-zA-Z0-9]{4,12}$/);
+    var getemail= RegExp(/^[0-9a-zA-Z][0-9a-zA-Z\_\-]*[0-9a-zA-Z](\.[a-zA-Z]{2,6}){1,2}$/);
     var getName = RegExp(/^[가-힣]+$/);
     var getNum  = RegExp(/^[0-9]*$/);
     var password1 = $('#password1').val();
@@ -164,17 +177,6 @@ function formChk(){
         alert("이름을 한글로 입력해주세요");
         $('#name').focus();
     }
-    else if($('#sec_number1').val().length<6 || $('#sec_number2').val().length<7){
-        alert('주민번호를 확인하여주세요');
-        $('#sec_number1').focus();
-    }
-    else if(!getNum.test($('#sec_number1').val()) || !getNum.test($('#sec_number2').val())){
-        alert('주민번호는 숫자만 입력가능합니다.');
-    }
-    else if(!$('#phone1').val() || !$('#phone2').val()|| !$('#phone3').val()){
-        alert("휴대폰 번호를 입력하여주세요");
-        $('#phone1').focus();
-    }
     else if(!$('#id').val()){
         alert("ID를 입력하여주세요");
         $('#id').focus();
@@ -182,6 +184,9 @@ function formChk(){
     else if(!getCheck.test($("#id").val())){
         alert("한글및 특수기호는 입력하실 수 없습니다.");
         $("#id").focus();
+    }
+    else if($('#check_id_ok').val() == 'no'){
+        alert("ID 중복체크를 확인해주세요");
     }
     else if(!password1 || !password2){
         alert("패스워드를 입력하여주세요");
@@ -197,10 +202,21 @@ function formChk(){
         $('#password1').val('');
         $('#password2').val('');
     }
-    
-    else if($('#check_id_ok').val() == 'no'){
-        alert("ID 중복체크를 확인해주세요");
+    else if(!getNum.test($("#phone1").val()) || !getNum.test($("#phone2").val()) || !getNum.test($("#phone3").val()) ){
+        alert("휴대폰 번호를 숫자로 입력해주세요");
+        $('#phone1').focus();
     }
+    else if(!getCheck.test($("#email1").val())){
+        alert('4글자 이하, 한글및 특수기호는 입력하실 수 없습니다.');
+        $('#email1').focus();
+    }
+    else if(!getemail.test($("#email2").val())){
+        alert('이메일 형식을 확인해주세요');
+        $('#email2').focus();
+    }
+    // else if(!getNum.test($('#sec_number1').val()) || !getNum.test($('#sec_number2').val())){
+    //     alert('주민번호는 숫자만 입력가능합니다.');
+    // }
     else{
         document.joinForm1.submit();
        return true;
@@ -259,4 +275,12 @@ function formChk(){
 //         alert('사용가능한 ID 입니다'));
 //     }
 // })
+//  $('#email2').on('change', function(){
+
+//     if($('#email2 option:selected').text() == '직접입력'){
+//         var text = "<input type='text' id = 'email2' name='email2' maxlength='20' placeholder=''>";
+//         $('#email2').text(text);
+//     }
+//  })
+
 </script>
