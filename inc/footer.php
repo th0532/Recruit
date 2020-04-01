@@ -18,6 +18,6 @@ echo "<script>$('.search select').val('".$search_type."');</script>";
 <script>
 //textarea 높이조절
 autosize($(".cotent_text"));
-autosize($(".comment_text"));
+autosize($(".comment_content"));
 
 </script>

@@ -1,22 +1,24 @@
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 <?php
 session_start();
 include "./inc/dbconnect.php";
-include "./inc/left.php";
 include "./inc/top.php";
+include "./inc/left.php";
 include "./inc/paging.php";
 
 // search 기능 위해서 쿼리구분
-
     if($search_type == 1){
         $query = "SELECT * FROM license where title LIKE '%".$search_text."%' ORDER BY num DESC LIMIT $s_point,$list";
     }else if($search_type == 2){
         $query = "SELECT * FROM license where id='".$search_text."' ORDER BY num DESC LIMIT $s_point,$list";
-    }else{
+    }
+    else{
         $query = "SELECT * FROM license ORDER BY num DESC LIMIT $s_point,$list";
         $search_type ='1';
     }
-    $result = mysqli_query($connect, $query);
 
+    $result = mysqli_query($connect, $query);
+    
     $i=0;
     while($row = mysqli_fetch_array($result)){
         $num[$i] = $row['num'];
@@ -26,15 +28,16 @@ include "./inc/paging.php";
         $title[$i] = $row['title'];
         $content[$i] = $row['content'];
 
+        // date 형식 변경
         $date_val[$i] = substr($date, 2, 14);
 
         $i++;
     }
-
+    
 ?>  
 <link rel="stylesheet" href="./assets/css/style.css">
 <form action="./exec/search_exec.php" method ="POST">
-<input type="hidden" value="community" name="db_gubun">
+<input type="hidden" value="license" name="db_gubun">
     <div class="content">
         <div class="section1">
             <div class="title">
@@ -67,6 +70,7 @@ include "./inc/paging.php";
                         $i=0;
                         while($row = mysqli_fetch_array($result)){
                     ?>
+                    
                     <tr>
                         <td><a href="./license_view.php?num=<?=$num[$i]?>&page=<?=$page?>&mode=search&type=<?=$search_type?>&search=<?=$search_text?>"><?=$num[$i]?></a></td>
                         <td><a href="./license_view.php?num=<?=$num[$i]?>&page=<?=$page?>&mode=search&type=<?=$search_type?>&search=<?=$search_text?>"><?=$title[$i]?></a></td>
@@ -78,6 +82,8 @@ include "./inc/paging.php";
                 </table>
 
                 <button type="button" class="insert"><a href="./license_write.php?mode=insert">글쓰기</a></button>
+
+                
             </div> <!--table_pc-->
 
     <!-- 모바일 버전을 위하여 -->
@@ -99,16 +105,17 @@ include "./inc/paging.php";
                             </div>
                         </a>
                     </li>
+
                     <?php  $i++; } ?>
                 </ul>
                 <button type="button" class="insert"><a href="./license_write.php?mode=insert">글쓰기</a></button>
             </div> <!-- table_mb -->
-        
-            <!-- paging -->
-            <?php 
-                include "./inc/paging_content.php";
-            ?>
-            <!-- paging -->
+
+                <!-- paging -->
+                <?php 
+                    include "./inc/paging_content.php";
+                ?>
+                <!-- paging -->
 
         </div> <!-- section2 -->
         
@@ -117,3 +124,7 @@ include "./inc/paging.php";
 <?php
     include "./inc/footer.php";
 ?>
+
+<script>
+
+</script>

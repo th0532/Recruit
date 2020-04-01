@@ -1,7 +1,7 @@
 <?php
 include "./inc/login_session.php";
-include "./inc/left.php";
 include "./inc/top.php";
+include "./inc/left.php";
 
     $mode = $_GET['mode'];
 ?>  
@@ -16,7 +16,7 @@ include "./inc/top.php";
                 <li><h3>자격증후기</h3></li>
                 <li>
                     <span>제목</span>
-                    <input type="text" maxlength=45 name="title" >
+                    <input type="text" maxlength=70 name="title" >
                 </li>
                 <li>
                     <p>내용</p>

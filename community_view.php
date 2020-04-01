@@ -2,8 +2,8 @@
 <?php
 include "./inc/login_session.php";
 include "./inc/dbconnect.php";
-include "./inc/left.php";
 include "./inc/top.php";
+include "./inc/left.php";
 
     if(isset($_GET['num'])){
         $param_num = $_GET['num'];
@@ -89,7 +89,7 @@ include "./inc/top.php";
                         </li> -->
                     </div>
                     <li>
-                        <textarea name="comment_text" style="width:100%; height:10%;" placeholder="댓글을 입력하세요"></textarea>
+                        <textarea cols=5 rows=5 wrap="virtual" name="comment_text" style="width:100%; height:10%;" placeholder="댓글을 입력하세요"></textarea>
                     </li>
                 </ul>
                 <div class="active">

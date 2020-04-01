@@ -32,8 +32,16 @@ include "./inc/top.php";
 </form>
 
 <!-- PW 찾기 -->
-<form action="./exec/login_exec.php" method ="POST" onSubmit="formChk_pw();return false">
+<form action="./update_pass.php" method ="POST" onSubmit="formChk_pw();return false">
     <input value="find_pass" type="hidden" name="db_gubun">  <!-- db구분 위하여 -->
+    <input value="" type="hidden" id= "db_name" name="db_name">  
+    <input value="" type="hidden" id= "db_id" name="db_id">  
+    <input value="" type="hidden" id= "db_email1" name="db_email1">  
+    <input value="" type="hidden" id= "db_email2" name="db_email2">  
+    <input value="" type="hidden" id= "db_phone1" name="db_phone1">  
+    <input value="" type="hidden" id= "db_phone2" name="db_phone2">  
+    <input value="" type="hidden" id= "db_phone3" name="db_phone3">  
+    
     <div class="content" >
         <div class="IDPASS" style=" border-top:2px solid black; margin-top:5%; padding-top:3%;">
             <ul>
@@ -115,7 +123,17 @@ function formChk_pw(){
     var getNum  = RegExp(/^[0-9]*$/);
     var password1 = $('#password1').val();
     var password2 = $('#password2').val();
-   
+
+    //패스워드변경
+    $('#db_name').val($('#pw_name').val());
+    $('#db_id').val($('#pw_id').val());
+    $('#db_email1').val($('#pw_email1').val());
+    $('#db_email2').val($('#pw_email2').val());
+    $('#db_phone1').val($('#pw_phone1').val());
+    $('#db_phone2').val($('#pw_phone2').val());
+    $('#db_phone3').val($('#pw_phone3').val());
+
+
     if( !$('#pw_name').val()){
         alert("이름을 입력하여주세요");
         $('#pw_name').focus();
@@ -161,4 +179,8 @@ function formChk_pw(){
        return true;
     }
 }
+
+
+
+
 </script>

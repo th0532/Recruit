@@ -65,7 +65,7 @@ $query = "select id from login";
                 <li><p>아이디</p></li>
                 <button id = "check_id" type=button id="myBtn">중복체크</button>
                 <li><input id="check_id_ok" type="hidden" value="no"> </li>
-                <li><input id="id" type="text" name="id"> </li>
+                <li><input id="id" type="text" maxlength="20" name="id"> </li>
                 
                 <li><p>비밀번호</p></li>
                 <li><input type="password" name="pass" id ="password1" > </li>
@@ -118,7 +118,7 @@ $query = "select id from login";
 <?php 
 echo "<script>
 $('#check_id').on('click', function(){
-    var getCheck= RegExp(/^[a-zA-Z0-9]{4,12}$/);
+    var getCheck= RegExp(/^[a-zA-Z0-9]{4,20}$/);
     var test ='".$member_id."';
     var check_flag =0;
     var cnt = 0;
@@ -162,7 +162,7 @@ $('#check_id').on('click', function(){
 ?>
 <script>
 function formChk(){
-    var getCheck= RegExp(/^[a-zA-Z0-9]{4,12}$/);
+    var getCheck= RegExp(/^[a-zA-Z0-9]{4,20}$/);
     var getemail= RegExp(/^[0-9a-zA-Z][0-9a-zA-Z\_\-]*[0-9a-zA-Z](\.[a-zA-Z]{2,6}){1,2}$/);
     var getName = RegExp(/^[가-힣]+$/);
     var getNum  = RegExp(/^[0-9]*$/);

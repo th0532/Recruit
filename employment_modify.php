@@ -1,8 +1,8 @@
 <?php
 include "./inc/login_session.php";
 include "./inc/dbconnect.php";
-include "./inc/left.php";
 include "./inc/top.php";
+include "./inc/left.php";
 include "./inc/function.php";
 
     $mode = $_GET['mode'];
@@ -47,7 +47,7 @@ include "./inc/function.php";
                 </li>
                 <li>
                     <span>제목</span>
-                    <input type="text" value="<?=$title?>" maxlength=45 name="title" >
+                    <input type="text" value="<?=$title?>" maxlength=70 name="title" >
                 </li>
                 <li>
                     <p>내용</p>

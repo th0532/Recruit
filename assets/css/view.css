@@ -11,6 +11,9 @@
     width:76%;
     padding:1% 0%;
 }
+.section1 > ul > .comment > li{
+    display:inline-block;
+}
 .bold {
     font-weight:bold;
 }
@@ -67,6 +70,11 @@
     font-weight: 600;
     height: 25px;
 }
+.admin{
+    color:blue;
+    margin-left:15px;
+    font-size:18px;
+   }
 
 @media (max-width: 768px){
     .content{

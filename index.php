@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "./inc/left.php";
 include "./inc/top.php";
+include "./inc/left.php";
 
 ?>  
 <link rel="stylesheet" href="./assets/css/index.css">
@@ -18,7 +18,7 @@ include "./inc/top.php";
               <p>취업후기</p><br>
               대기업, 중견기업, 중소기업, 공기업의 <br>
               취업후기와 TSET, NCS 시험후기를 확인하고<br>
-              취업의 도전하세요
+              취업에 도전하세요
               </span>
           </a>
         </div>

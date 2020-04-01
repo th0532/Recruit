@@ -14,7 +14,9 @@ $title      = $_POST['title'];
 $title      = htmlspecialchars($title,ENT_QUOTES,'UTF-8');
 
 $content    = $_POST['content'];
+//incruit는 admin만입력가능하기에 밑에서 $content    = $_POST['content']; 한번 선언
 $content      = htmlspecialchars($content,ENT_QUOTES,'UTF-8');
+
 
 
 if(isset($_GET['num'])){$param_num = $_GET['num'];}else{$param_num =1;}
@@ -73,6 +75,7 @@ else if($db_gubun == 'employment'){
     }
 }
 else if($db_gubun == 'incruit'){
+    $content    = $_POST['content'];
     $category   = $_POST['category'];
     if($mode=='insert'){
 

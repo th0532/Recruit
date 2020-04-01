@@ -1,8 +1,8 @@
 <?php
 include "./inc/login_session.php";
 include "./inc/dbconnect.php";
-include "./inc/left.php";
 include "./inc/top.php";
+include "./inc/left.php";
     
 
 
@@ -68,15 +68,18 @@ include "./inc/top.php";
                         <span class="bold"><?=$title?></span>
                     </li>
                     <li>
-                        <?php
-                            if(strlen($img_name) !== 13){
+                    <?php
+                        if(strlen($img_name) !== 13){
                         ?>
                         <img style="width:100%;" src="./uploads/<?=$img_name?>"  alt="">
+                        <textarea readonly style="width:100%; height:60px; border: none; margin-top: 5%; padding: 0% 2%;"><?=$content?></textarea>
+                        <?php
+                        }else{
+                        ?>
+                        <textarea class='cotent_text'  readonly style="width:100%;  border: none; margin-top: 5%; padding: 0% 2%;"><?=$content?></textarea>
                         <?php
                         }
                         ?>
-                        <textarea class='cotent_text' readonly style="width:100%; height:35%; border: none; margin-top: 5%; padding: 0% 2%;"><?=$content?></textarea>
-
                     </li>
                 </ul>
                 <div class="active">

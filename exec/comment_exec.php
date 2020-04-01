@@ -10,7 +10,8 @@ if(isset($_GET['search'])){$search = $_GET['search'];}else{$search = 1;}
 if(isset($_GET['category'])){$param_category = $_GET['category'];}else{$param_category = 1;}
 $db_gubun  = $_POST['db_gubun'];
 $comment_text = $_POST['comment_text'];
-$comment_text      = htmlspecialchars($comment_text,ENT_QUOTES,'UTF-8');
+$comment_text_save = htmlspecialchars($comment_text,ENT_QUOTES,'UTF-8');
+$comment_text =str_replace("\n","<br/>", $comment_text_save);
 $id         = $_SESSION['userid'];
 $date       = date("y:m:d H:i:s");
 

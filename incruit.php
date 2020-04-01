@@ -3,8 +3,8 @@
 session_start();
 
 include "./inc/dbconnect.php";
-include "./inc/left.php";
 include "./inc/top.php";
+include "./inc/left.php";
 include "./inc/paging.php";
 include "./inc/function.php";
 
