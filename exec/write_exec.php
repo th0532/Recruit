@@ -109,4 +109,6 @@ else if($db_gubun == 'incruit'){
     }
 }
 
+mysqli_close($connect);
+
 ?>  

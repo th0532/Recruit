@@ -2,6 +2,19 @@
 include "./inc/dbconnect.php";
 include "./inc/top.php";
 
+    if(isset($_POST['agree_check'])){
+        $agree = $_POST['agree_check'];
+    }
+    else{
+        $agree='false';
+    }
+
+if($agree !== 'agree22'){
+    echo "<script>location.href ='./agree.php';</script>";
+}else{
+
+}
+
 $query = "select id from login";
     mysqli_query($connect, $query);
     $result = mysqli_query($connect,$query);
@@ -201,6 +214,10 @@ function formChk(){
         alert("패스워드를 6자리 이상으로 입력해주세요");
         $('#password1').val('');
         $('#password2').val('');
+    }
+    else if(!$('#phone1').val() || !$('#phone2').val() || !$('#phone3').val() ){
+        alert("휴대폰 번호를 입력해주세요");
+        $('#phone1').focus();
     }
     else if(!getNum.test($("#phone1").val()) || !getNum.test($("#phone2").val()) || !getNum.test($("#phone3").val()) ){
         alert("휴대폰 번호를 숫자로 입력해주세요");

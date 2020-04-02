@@ -36,9 +36,8 @@ else if ($db_gubun == 'incruit'){
 }
 
 
-echo $db_gubun.$id.$date;
 
-
+mysqli_close($connect);
 
 
 

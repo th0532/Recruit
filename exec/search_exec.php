@@ -46,4 +46,6 @@ if(isset($_GET['category'])){
    
     }
 
+    mysqli_close($connect);
+
 ?>  

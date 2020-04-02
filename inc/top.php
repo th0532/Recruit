@@ -44,8 +44,11 @@ input,button {
     vertical-align: baseline;
     box-sizing: content-box;
 }
-input{
+input[type=submit]{
     all:unset;
+    border:1px solid rgb(169, 169, 169);
+}
+input{
     border:1px solid rgb(169, 169, 169);
 }
 </style>

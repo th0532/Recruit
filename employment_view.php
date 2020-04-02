@@ -104,6 +104,10 @@ include "./inc/left.php";
         </div> <!-- content -->
 </form>
 
+<?php
+    include "./inc/footer.php";
+?>
+
 <script>
 
     $( document ).ready(function() {

@@ -44,5 +44,8 @@ $row = mysqli_fetch_array($result);
             echo "<script>location.href = '../".$db_gubun."_view.php?num=".$param_num."&category=".$param_category."&page=".$param_page."&mode=search&type=".$type."&search=".$search."'</script>";
 
     }
+    mysqli_close($connect);
+
+    
 
 ?>
