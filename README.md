@@ -6,5 +6,28 @@
 #### back-end : php7.4
 #### db : mysql
 
-## 결과물 [바로가기](http://recruit.dothome.co.kr/index.php)
+Screenshots < Mobile >
+-------------
+<div>
+  <img src="https://user-images.githubusercontent.com/49905817/90545836-2fcc9e00-e1c4-11ea-926b-aa00827cc6a5.png">
+</div>
+
+Screenshots < Web >
+-------------
+<div>
+  <img width="1000" src="https://user-images.githubusercontent.com/49905817/90546912-b33abf00-e1c5-11ea-8254-992c91e161a3.png">
+  <br><br>
+  <img width="1000" src="https://user-images.githubusercontent.com/49905817/90546922-b5048280-e1c5-11ea-9f28-f79cf17941c7.png">
+  <br><br>
+  <img width="1000" src="https://user-images.githubusercontent.com/49905817/90546929-b6ce4600-e1c5-11ea-9241-476d991f18b2.png">
+</div>
+
+
+
+
+
+
+
+
+## 결과물 [바로가기] (현재 X) (http://recruit.dothome.co.kr/index.php)
 
