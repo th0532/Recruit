@@ -15,7 +15,7 @@ Screenshots < Mobile >
 Screenshots < Web >
 -------------
 <div>
-  <img width="1000" src="https://user-images.githubusercontent.com/49905817/90546912-b33abf00-e1c5-11ea-8254-992c91e161a3.png">
+  <img width="1000" src="https://user-images.githubusercontent.com/49905817/90629269-0bbb9c00-e25a-11ea-83e7-01162f18f309.png">
   <br><br>
   <img width="1000" src="https://user-images.githubusercontent.com/49905817/90546922-b5048280-e1c5-11ea-9f28-f79cf17941c7.png">
   <br><br>
