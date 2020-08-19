@@ -71,11 +71,10 @@
     height: 25px;
 }
 .admin{
-    color:blue;
-    margin-left:15px;
-    font-size:18px;
-   }
-
+ color:blue;
+ margin-left:15px;
+ font-size:18px;
+}
 @media (max-width: 768px){
     .content{
         width:94%;

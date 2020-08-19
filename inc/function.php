@@ -1,7 +1,7 @@
 <?php
 
 // url로 구분하여 쿼리 변경 
-if( $_SERVER['PHP_SELF'] == '/recruit/employment.php' ) {
+if( $_SERVER['PHP_SELF'] == '/employment.php' ) {
         
     if(!isset($_GET['category'])){
         $param_category = 1;
@@ -30,12 +30,12 @@ if( $_SERVER['PHP_SELF'] == '/recruit/employment.php' ) {
                 break;
             case 10: $category_gubun = "교육기관";
                 break;
-            case 11: $category_gubun = "공공기관, 공기업, 협회";
+            case 11: $category_gubun = "공공기관, 공기업";
                 break;
             default:     $category_gubun = "전체";
         }
 }
-else if( $_SERVER['PHP_SELF'] == '/recruit/incruit.php' ) {
+else if( $_SERVER['PHP_SELF'] == '/incruit.php' ) {
     //category get 값 체크 후 카테고리 기능 구현
     if(!isset($_GET['category'])){
         $param_category = 1;
@@ -59,7 +59,9 @@ else if( $_SERVER['PHP_SELF'] == '/recruit/incruit.php' ) {
             break;
         case 8: $category_gubun = "스타트업";
             break;
-        case 9: $category_gubun = "인턴";
+        case 9: $category_gubun = "공공기관, 공기업";
+            break;
+        case 10: $category_gubun = "인턴";
             break;
         default:$category_gubun = "전체";
         }

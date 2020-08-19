@@ -1,0 +1,188 @@
+{    
+    "MainList":[
+        {
+            "img":"http://recruit.dothome.co.kr/img/profile.png",
+            "type1":"비정규",
+            "type1Class":"TypePurple",
+            "subject":"2020-1 ‘취·창업 진로세미나’ 8주차(입사서류/면접 완전정복 특강) 강좌",
+            "professor":"취업지원팀 / 박윤주"
+        },
+        {
+            "img":"http://recruit.dothome.co.kr/img/professor1.png",
+            "type1":"교과",
+            "type1Class":"TypeGreen",
+            "type2":"글로벌",
+            "type2Class":"TypeWhite",
+            "subject":"알고리즘 (08095_003)",
+            "professor":"김우성"
+        },
+        {
+            "img":"http://recruit.dothome.co.kr/img/professor2.png",
+            "type1":"교과",
+            "type1Class":"TypeGreen",
+            "type2":"글로벌",
+            "type2Class":"TypeWhite",
+            "subject":"웹프로그래밍 (09079_003)",
+            "professor":"이복기"
+        },
+        {
+            "img":"http://recruit.dothome.co.kr/img/profile.png",
+            "type1":"교과",
+            "type1Class":"TypeGreen",
+            "type2":"글로벌",
+            "type2Class":"TypeWhite",
+            "subject":"리눅스 (10888_007)",
+            "professor":"유현"
+        },
+        {
+            "img":"http://recruit.dothome.co.kr/img/professor3.png",
+            "type1":"교과",
+            "type1Class":"TypeGreen",
+            "type2":"글로벌",
+            "type2Class":"TypeWhite",
+            "subject":"C++ (11581_002)",
+            "professor":"김석수"
+        },
+        {
+            "img":"http://recruit.dothome.co.kr/img/professor4.png",
+            "type1":"교과",
+            "type1Class":"TypeGreen",
+            "type2":"글로벌",
+            "type2Class":"TypeWhite",
+            "subject":"창업과 마케팅 (12735_001)",
+            "professor":"이상윤"
+        },
+        {
+            "img":"http://recruit.dothome.co.kr/img/professor5.png",
+            "type1":"교과",
+            "type1Class":"TypeGreen",
+            "type2":"글로벌",
+            "type2Class":"TypeWhite",
+            "subject":"웹 프로그래밍 입문 (13056_001)",
+            "professor":"황희정"
+        },
+        {
+            "img":"http://recruit.dothome.co.kr/img/professor6.png",
+            "type1":"교과",
+            "type1Class":"TypeGreen",
+            "type2":"글로벌",
+            "type2Class":"TypeWhite",
+            "subject":"취·창업 진로세미나 (13129_089)",
+            "professor":"강운구"
+        },
+        {
+            "img":"http://recruit.dothome.co.kr/img/profile.png",
+            "type1":"비정규",
+            "type1Class":"TypePurple",
+            "subject":"2020년도 재학생 대상 폭력예방교육(성폭력⋅가정폭력)(G) (1_prevention)",
+            "professor":"가천인권센터"
+        }
+    ],
+        "Infomation":{
+            "Info":[
+                {
+                    "date":"2020-05-19 17:23",
+                    "title":"퀴즈개설 가이드 배포"
+                },
+                {
+                    "date":"2020-05-19 17:19",
+                    "title":"사이버캠퍼스 이용 안내 공지"
+                },
+                {
+                    "date":"2020-03-30 11:50",
+                    "title":"군복무자 MOOC 수강공지"
+                },
+                {
+                    "date":"2020-03-30 07:49",
+                    "title":"[긴급]파일 업로드 용량 제한"
+                },
+                {
+                    "date":"2020-03-26 09:37",
+                    "title":"동영상 변환 관련 안내"
+                }
+            ],
+                "ingInfo":[
+                {
+                    "date":"2020-05-19 17:23",
+                    "subject":"[알고리즘 (08095_003)]",
+                    "title":"시험 장소 공지"
+                },
+                {
+                    "date":"2020-05-19 17:19",
+                    "subject":"[리눅스 (10888_007)]",
+                    "title":"중간고사 대체 과제 알림"
+    
+                },
+                {
+                    "date":"2020-03-30 11:50",
+                    "subject":"[웹프로그래밍 (09079_003)]",
+                    "title":" 중간고사"
+    
+                },
+                {
+                    "date":"2020-03-30 07:49",
+                    "subject":"[알고리즘 (08095_003)]",
+                    "title":"중간고사 공지"
+    
+                },
+                {
+                    "date":"2020-03-26 09:37",
+                    "subject":"[알고리즘 (08095_003)]",
+                    "title":"대면강의 재공고"
+                }
+            ]
+        },
+        "right":[
+                {
+                    "title":"중요공지",
+                    "img":"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/core/1591173085/t/switch_minus",
+                    "list":[
+                        {
+                            "img":"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/theme_coursemosv2/1591173085/layout/block-notices",
+                            "title":"과거 강좌(수강 강좌) 확인방법",
+                            "date":"2016-09-22 11:26"
+                        },
+                        {
+                            "img":"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/theme_coursemosv2/1591173085/layout/block-notices",
+                            "title":"사이버캠퍼스 모바일 APP 사용 안내",
+                            "date":"2016-09-23 17:28"
+                        }
+                ]},
+                {
+                    "title":"예정된 할일",
+                    "img":"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/core/1591173085/t/switch_minus",
+                    "list":[
+                        {
+                            "img":"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/theme_coursemosv2/1591173085/timeline/vod",
+                            "title":"C++1회",
+                            "date":"2020-03-04 00:00 ~ 2020-12-11 23:59"
+                        },
+                        {
+                            "img":"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/theme_coursemosv2/1591173085/timeline/vod",
+                            "title":"C++2회",
+                            "date":"2020-03-04 00:00 ~ 2020-12-11 23:59"
+                        },
+                        {
+                            "img":"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/theme_coursemosv2/1591173085/timeline/vod",
+                            "title":"C++3회",
+                            "date":"2020-03-04 00:00 ~ 2020-12-11 23:59"
+                        },
+                        {
+                            "img":"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/theme_coursemosv2/1591173085/timeline/vod",
+                            "title":"C++4회",
+                            "date":"2020-03-04 00:00 ~ 2020-12-11 23:59"
+                        },
+                        {
+                            "img":"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/theme_coursemosv2/1591173085/timeline/vod",
+                            "title":"C++5회",
+                            "date":"2020-03-04 00:00 ~ 2020-12-11 23:59"
+                        }
+                ]},
+                {
+                    "title":"전체 할일",
+                    "img":"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/core/1591173085/t/switch_minus",
+                    "list":[
+                        
+            ]}
+        ]}
+       

@@ -15,6 +15,9 @@
     font-size:1.3rem;
     text-decoration:underline;
 }
+.logo_box {
+    margin-left:3%;
+}
 .logo_box > h1{
     color:#aaaaaa;
     font-size:2rem;
@@ -38,6 +41,8 @@
 }
 .nav {
     width:90%;
+    margin-left:3%;
+    margin-bottom: 60px;
 }
 .nav > li{
     height:500px;
@@ -94,8 +99,9 @@
 }
 @media (max-width: 768px){
     .mobile_nav_on{
-        position: fixed;
         right: 35%;
+        position: absolute;
+        top: 0;
     }
     .side_menu{
         width:0%;
@@ -143,6 +149,8 @@
 @media (max-width: 576px){
     .mobile_nav_on{
         right: 46%;
+        position: absolute;
+        top: 0;
     }
     .side_menu_on{
         width:46%;

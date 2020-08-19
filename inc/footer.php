@@ -1,7 +1,7 @@
 <?php
 
 $localhost = 'localhost';
-$dbname = 'review';
+$dbname = 'recruit';
 $id = 'root';
 $pass = '';
 
@@ -18,6 +18,6 @@ echo "<script>$('.search select').val('".$search_type."');</script>";
 <script>
 //textarea 높이조절
 autosize($(".cotent_text"));
-autosize($(".comment_content"));
+autosize($(".comment_text"));
 
 </script>

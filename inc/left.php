@@ -1,4 +1,4 @@
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="./assets/css/left.css">
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <!-- mobile_navigation -->
@@ -42,7 +42,7 @@
                     <li><a href="./employment.php?category=8">제조</a></li>
                     <li><a href="./employment.php?category=9">건설</a></li>
                     <li><a href="./employment.php?category=10">교육기관</a></li>
-                    <li><a href="./employment.php?category=11">공공기관, 공기업, 협회</a></li>
+                    <li><a href="./employment.php?category=11">공공기관, 공기업</a></li>
                 </ul>
             </div>
         </div>
@@ -58,7 +58,8 @@
                     <li><a href="./incruit.php?category=6">중소기업</a></li>
                     <li><a href="./incruit.php?category=7">해외기업</a></li>
                     <li><a href="./incruit.php?category=8">스타트업</a></li>
-                    <li><a href="./incruit.php?category=9">인턴</a></li>
+                    <li><a href="./incruit.php?category=9">공공기관, 공기업</a></li>
+                    <li><a href="./incruit.php?category=10">인턴</a></li>
                 </ul>
             </div>
         </div>
@@ -66,8 +67,10 @@
             <button><a href="./community.php">자유게시판</a></button>
         </ul>
     </div>
-</div>
+    <a  style="font-size:0.9rem; margin-left: 25%; color:#eeeeee;" href="tel:010-7424-7829">010-7424-7829</a>
+    <p style="font-size:0.9rem; text-align:center; color:#eeeeee;">th74247829@gmail.com</p>
 
+</div>
 <script>
 // 모바일 네비 메뉴 on off
 var flag = 1;

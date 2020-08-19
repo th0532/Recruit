@@ -7,7 +7,7 @@ include "./inc/function.php";
 
     // ----------------------------- 페이징 start--------------------------------
     // url로 구분하여 쿼리 변경 
-    if( $_SERVER['PHP_SELF'] == '/recruit/license.php' ) {
+    if( $_SERVER['PHP_SELF'] == '/license.php' ) {
         if($search_type == 1){
             $query = "SELECT num FROM license where title LIKE '%".$search_text."%' ORDER BY num ";
             }else if($search_type == 2){
@@ -23,7 +23,7 @@ include "./inc/function.php";
             }
     }
     // url로 구분하여 쿼리 변경     
-    else if( $_SERVER['PHP_SELF'] == '/recruit/community.php' ) {
+    else if( $_SERVER['PHP_SELF'] == '/community.php' ) {
         if($search_type == 1){ //search 제목 검색 LIKE %% 이기에 검색칸이 공백이어도 모든값을 가져옴
             $query = "SELECT num FROM community where title LIKE '%".$search_text."%' ORDER BY num ";
         }else if($search_type == 2){ //search ID 값 기준 가져오기
@@ -38,7 +38,7 @@ include "./inc/function.php";
         }
     }
     // url로 구분하여 쿼리 변경     
-    else if( $_SERVER['PHP_SELF'] == '/recruit/employment.php' ) {
+    else if( $_SERVER['PHP_SELF'] == '/employment.php' ) {
         // 카테고리 구분
         if($category_gubun == "전체"){
             if($search_type == 1){
@@ -74,7 +74,7 @@ include "./inc/function.php";
         }
     }
     // url로 구분하여 쿼리 변경     
-    else if( $_SERVER['PHP_SELF'] == '/recruit/incruit.php' ) {
+    else if( $_SERVER['PHP_SELF'] == '/incruit.php' ) {
         // 카테고리 구분
         if($category_gubun == "전체"){
             if($search_type == 1){

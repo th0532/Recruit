@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /html/inc/dbconnect.php
+Disallow: /html/inc/footer.php

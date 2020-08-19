@@ -1,6 +1,6 @@
 <?php
     $localhost = 'localhost';
-    $dbname = 'review';
+    $dbname = 'recruit';
     $id = 'root';
     $pass = '';
 

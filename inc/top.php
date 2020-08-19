@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="./assets/css/top.css">
-    <title>취업 커뮤니티 | 채용 안내 | Recruit</title>
+    <title>취업 | 채용 안내 | 커뮤니티 | 자격증후기</title>
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="취업 커뮤니티 | 채용 안내 | Recruit">
+    <meta name="description" content="취업준비 하는 사람들을 위한 커뮤니티 사이트">
     <meta property="og:type" content="website"> 
-    <meta property="og:title" content="취업 커뮤니티 | 채용 안내 | Recruit">
-    <meta property="og:description" content="채용후기 취업후기 자격증후기 및 커뮤니티">
+    <meta property="og:title" content="취업커뮤니티 | 채용 안내 | Recruit">
+    <meta property="og:description" content="취업준비 하는 사람들을 위한 커뮤니티 사이트">
     <meta property="og:image" content="http://recruit.dothome.co.kr/recruit/assets/img/bg/bg_1.jpg">
     <meta property="og:url" content="http://recruit.dothome.co.kr/recruit/">
 </head>
